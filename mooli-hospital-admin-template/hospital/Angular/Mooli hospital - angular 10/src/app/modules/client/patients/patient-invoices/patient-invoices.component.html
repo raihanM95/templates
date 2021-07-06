@@ -1,0 +1,299 @@
+<app-header></app-header>
+<div id="main-content">
+    <div class="container-fluid">
+        <!-- Page header section  -->
+        <div class="block-header">
+            <div class="row clearfix">
+                <div class="col-lg-4 col-md-12 col-sm-12">
+                    <h1>Hi, Welcomeback!</h1>
+                    <span>JustDo Patients Invoice,</span>
+                </div>
+                <div class="col-lg-8 col-md-12 col-sm-12 text-lg-right">
+                    <div
+                        class="d-flex align-items-center justify-content-lg-end mt-4 mt-lg-0 flex-wrap vivify pullUp delay-550">
+                        <div class="border-right pr-4 mr-4 mb-2 mb-xl-0 hidden-xs">
+                            <p class="text-muted mb-1">Operation <span id="mini-bar-chart3"
+                                    class="mini-bar-chart"></span></p>
+                            <h5 class="mb-0">29</h5>
+                        </div>
+                        <div class="border-right pr-4 mr-4 mb-2 mb-xl-0">
+                            <p class="text-muted mb-1">Earning <span id="mini-bar-chart2" class="mini-bar-chart"></span>
+                            </p>
+                            <h5 class="mb-0">$981</h5>
+                        </div>
+                        <div class="mb-3 mb-xl-0">
+                            <p class="text-muted mb-1">Revenue <span id="mini-bar-chart1" class="mini-bar-chart"></span>
+                            </p>
+                            <h5 class="mb-0">$56 M</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row clearfix">
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="body">
+                        <form>
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Search Invoice">
+                                <div class="input-group-append">
+                                    <span class="input-group-text" id="search-mail"><i
+                                            class="icon-magnifier"></i></span>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="table-responsive invoice_list">
+                    <table class="table table-hover table-custom spacing5">
+                        <thead>
+                            <tr>
+                                <th style="width: 50px;">#</th>
+                                <th>Patient</th>
+                                <th>Dr.</th>
+                                <th style="width: 50px;">Amount</th>
+                                <th style="width: 50px;">Status</th>
+                                <th style="width: 110px;">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <span>A01</span>
+                                </td>
+                                <td>
+                                    <div class="d-flex align-items-center">
+                                        <div class="avatar avatar-blue" data-toggle="tooltip" data-placement="top"
+                                            title="Avatar Name"><span>SS</span></div>
+                                        <div class="ml-3">
+                                            <a href="javascript:void(0);" href="javascript:void(0);" title="">South
+                                                Shyanne</a>
+                                            <p class="mb-0">south.shyanne@example.com</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>Dr. Jason</td>
+                                <td>$1200</td>
+                                <td><span class="badge badge-success ml-0 mr-0">Done</span></td>
+                                <td>
+                                    <button type="button" class="btn btn-sm btn-default" tooltip="Send Invoice"
+                                        title="Send Invoice" data-toggle="tooltip"><i
+                                            class="icon-envelope"></i></button>
+                                    <button type="button" class="btn btn-sm btn-default ml-1" title="Print"
+                                        data-toggle="tooltip" tooltip="Print"><i class="icon-printer"></i></button>
+                                    <button type="button" class="btn btn-sm btn-default  ml-1" title="Delete"
+                                        data-toggle="tooltip" tooltip="Delete"><i class="icon-trash"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span>A02</span>
+                                </td>
+                                <td>
+                                    <div class="d-flex align-items-center">
+                                        <img src="assets/images/xs/avatar2.jpg" data-toggle="tooltip"
+                                            data-placement="top" title="Avatar Name" alt="Avatar"
+                                            class="avatar rounded-circle">
+                                        <div class="ml-3">
+                                            <a href="javascript:void(0);" title="">Zoe Baker</a>
+                                            <p class="mb-0">zoe.baker@example.com</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>Dr. Jason</td>
+                                <td>$378</td>
+                                <td><span class="badge badge-success ml-0 mr-0">Done</span></td>
+                                <td>
+                                    <button type="button" class="btn btn-sm btn-default" title="Send Invoice"
+                                        data-toggle="tooltip" tooltip="Send Invoice"><i
+                                            class="icon-envelope"></i></button>
+                                    <button type="button" class="btn btn-sm btn-default  ml-1" title="Print"
+                                        data-toggle="tooltip" tooltip="Print"><i class="icon-printer"></i></button>
+                                    <button type="button" class="btn btn-sm btn-default  ml-1" title="Delete"
+                                        data-toggle="tooltip" tooltip="Delete"><i class="icon-trash"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span>A03</span>
+                                </td>
+                                <td>
+                                    <div class="d-flex align-items-center">
+                                        <div class="avatar avatar-indigo" data-toggle="tooltip" data-placement="top"
+                                            title="Avatar Name"><span>CB</span></div>
+                                        <div class="ml-3">
+                                            <a href="javascript:void(0);" title="">Colin Brown</a>
+                                            <p class="mb-0">colinbrown@example.com</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>Dr. Jason</td>
+                                <td>$653</td>
+                                <td><span class="badge badge-success ml-0 mr-0">Done</span></td>
+                                <td>
+                                    <button type="button" class="btn btn-sm btn-default" title="Send Invoice"
+                                        data-toggle="tooltip" tooltip="Send Invoice"><i
+                                            class="icon-envelope"></i></button>
+                                    <button type="button" class="btn btn-sm btn-default  ml-1" title="Print"
+                                        data-toggle="tooltip" tooltip="Print"><i class="icon-printer"></i></button>
+                                    <button type="button" class="btn btn-sm btn-default  ml-1" title="Delete"
+                                        data-toggle="tooltip" tooltip="Delete"><i class="icon-trash"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span>A04</span>
+                                </td>
+                                <td>
+                                    <div class="d-flex align-items-center">
+                                        <div class="avatar avatar-green" data-toggle="tooltip" data-placement="top"
+                                            title="Avatar Name"><span>KG</span></div>
+                                        <div class="ml-3">
+                                            <a href="javascript:void(0);" title="">Kevin Gill</a>
+                                            <p class="mb-0">kevin.gill@example.com</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>Dr. Jason</td>
+                                <td>$451</td>
+                                <td><span class="badge badge-warning  ml-0 mr-0">Panding</span></td>
+                                <td>
+                                    <button type="button" class="btn btn-sm btn-default" title="Send Invoice"
+                                        data-toggle="tooltip" tooltip="Send Invoice"><i
+                                            class="icon-envelope"></i></button>
+                                    <button type="button" class="btn btn-sm btn-default  ml-1" title="Print"
+                                        data-toggle="tooltip" tooltip="Print"><i class="icon-printer"></i></button>
+                                    <button type="button" class="btn btn-sm btn-default  ml-1" title="Delete"
+                                        data-toggle="tooltip" tooltip="Delete"><i class="icon-trash"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span>B05</span>
+                                </td>
+                                <td>
+                                    <div class="d-flex align-items-center">
+                                        <img src="assets/images/xs/avatar5.jpg" data-toggle="tooltip"
+                                            data-placement="top" title="Avatar Name" alt="Avatar"
+                                            class="avatar rounded-circle">
+                                        <div class="ml-3">
+                                            <a href="javascript:void(0);" title="">Brandon Smith</a>
+                                            <p class="mb-0">Maria.gill@example.com</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>Dr. Jason</td>
+                                <td>$1,989</td>
+                                <td><span class="badge badge-success  ml-0 mr-0">Done</span></td>
+                                <td>
+                                    <button type="button" class="btn btn-sm btn-default" title="Send Invoice"
+                                        data-toggle="tooltip" tooltip="Send Invoice"><i
+                                            class="icon-envelope"></i></button>
+                                    <button type="button" class="btn btn-sm btn-default  ml-1" title="Print"
+                                        data-toggle="tooltip" tooltip="Print"><i class="icon-printer"></i></button>
+                                    <button type="button" class="btn btn-sm btn-default  ml-1" title="Delete"
+                                        data-toggle="tooltip" tooltip="Delete"><i class="icon-trash"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span>W06</span>
+                                </td>
+                                <td>
+                                    <div class="d-flex align-items-center">
+                                        <img src="assets/images/xs/avatar6.jpg" data-toggle="tooltip"
+                                            data-placement="top" title="Avatar Name" alt="Avatar"
+                                            class="avatar rounded-circle">
+                                        <div class="ml-3">
+                                            <a href="javascript:void(0);" title="">Kevin Baker</a>
+                                            <p class="mb-0">kevin.baker@example.com</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>Dr. Jason</td>
+                                <td>$343</td>
+                                <td><span class="badge badge-warning  ml-0 mr-0">Panding</span></td>
+                                <td>
+                                    <button type="button" class="btn btn-sm btn-default" title="Send Invoice"
+                                        data-toggle="tooltip" tooltip="Send Invoice"><i
+                                            class="icon-envelope"></i></button>
+                                    <button type="button" class="btn btn-sm btn-default  ml-1" title="Print"
+                                        data-toggle="tooltip" tooltip="Print"><i class="icon-printer"></i></button>
+                                    <button type="button" class="btn btn-sm btn-default  ml-1" title="Delete"
+                                        data-toggle="tooltip" tooltip="Delete"><i class="icon-trash"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span>A13</span>
+                                </td>
+                                <td>
+                                    <div class="d-flex align-items-center">
+                                        <img src="assets/images/xs/avatar3.jpg" data-toggle="tooltip"
+                                            data-placement="top" title="Avatar Name" alt="Avatar"
+                                            class="avatar rounded-circle">
+                                        <div class="ml-3">
+                                            <a href="javascript:void(0);" title="">Colin Brown</a>
+                                            <p class="mb-0">colin-brown@example.com</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>Dr. Jason</td>
+                                <td>$653</td>
+                                <td><span class="badge badge-success ml-0 mr-0">Done</span></td>
+                                <td>
+                                    <button type="button" class="btn btn-sm btn-default" title="Send Invoice"
+                                        data-toggle="tooltip" tooltip="Send Invoice"><i
+                                            class="icon-envelope"></i></button>
+                                    <button type="button" class="btn btn-sm btn-default  ml-1" title="Print"
+                                        data-toggle="tooltip" tooltip="Print"><i class="icon-printer"></i></button>
+                                    <button type="button" class="btn btn-sm btn-default  ml-1" title="Delete"
+                                        data-toggle="tooltip" tooltip="Delete"><i class="icon-trash"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span>D14</span>
+                                </td>
+                                <td>
+                                    <div class="d-flex align-items-center">
+                                        <img src="assets/images/xs/avatar4.jpg" data-toggle="tooltip"
+                                            data-placement="top" title="Avatar Name" alt="Avatar"
+                                            class="avatar rounded-circle">
+                                        <div class="ml-3">
+                                            <a href="javascript:void(0);" title="">Kevin Gill</a>
+                                            <p class="mb-0">kevin-gill@example.com</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>Dr. Jason</td>
+                                <td>$451</td>
+                                <td><span class="badge badge-warning  ml-0 mr-0">Panding</span></td>
+                                <td>
+                                    <button type="button" class="btn btn-sm btn-default" title="Send Invoice"
+                                        data-toggle="tooltip" tooltip="Send Invoice"><i
+                                            class="icon-envelope"></i></button>
+                                    <button type="button" class="btn btn-sm btn-default  ml-1" title="Print"
+                                        data-toggle="tooltip" tooltip="Print"><i class="icon-printer"></i></button>
+                                    <button type="button" class="btn btn-sm btn-default  ml-1" title="Delete"
+                                        data-toggle="tooltip" tooltip="Delete"><i class="icon-trash"></i></button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination">
+                        <li class="page-item"><a class="page-link" href="javascript:void(0);">Previous</a></li>
+                        <li class="page-item active"><a class="page-link" href="javascript:void(0);">1</a></li>
+                        <li class="page-item"><a class="page-link" href="javascript:void(0);">2</a></li>
+                        <li class="page-item"><a class="page-link" href="javascript:void(0);">3</a></li>
+                        <li class="page-item"><a class="page-link" href="javascript:void(0);">Next</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>

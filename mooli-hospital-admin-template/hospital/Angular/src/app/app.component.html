@@ -1,0 +1,74 @@
+<div class="themesetting">
+    <a href="javascript:void(0);" (click)="toggleThemeSetting()" class="theme_btn"><i
+            class="fa fa-gear fa-spin"></i></a>
+    <ul class="list-group">
+        <li class="list-group-item">
+            <ul class="choose-skin list-unstyled mb-0">
+                <li data-theme="green" [ngClass]="{'active': greenClass}" (click)="themeColor('g')">
+                    <div class="green"></div>
+                </li>
+                <li data-theme="orange" [ngClass]="{'active': orageClass}" (click)="themeColor('o')">
+                    <div class="orange"></div>
+                </li>
+                <li data-theme="blush" [ngClass]="{'active': blushClass}" (click)="themeColor('b')">
+                    <div class="blush"></div>
+                </li>
+                <li data-theme="cyan" [ngClass]="{'active': cyanClass}" (click)="themeColor('c')">
+                    <div class="cyan"></div>
+                </li>
+                <li data-theme="timber" [ngClass]="{'active': timberClass}" (click)="themeColor('t')">
+                    <div class="timber"></div>
+                </li>
+                <li data-theme="blue" [ngClass]="{'active': blueClass}" (click)="themeColor('bl')">
+                    <div class="blue"></div>
+                </li>
+                <li data-theme="amethyst" [ngClass]="{'active': amethystClass}" (click)="themeColor('a')">
+                    <div class="amethyst"></div>
+                </li>
+            </ul>
+        </li>
+        <li class="list-group-item d-flex align-items-center justify-content-between">
+            <span>Light Sidebar</span>
+            <label class="switch sidebar_light">
+                <input type="checkbox" checked="" (click)="ToggleLight($event)">
+                <span class="slider round"></span>
+            </label>
+        </li>
+        <li class="list-group-item d-flex align-items-center justify-content-between">
+            <span>Gradient</span>
+            <label class="switch gradient_mode">
+                <input type="checkbox" checked="" (click)="ToggleGradient($event)">
+                <span class="slider round"></span>
+            </label>
+        </li>
+        <li class="list-group-item d-flex align-items-center justify-content-between">
+            <span>Dark Mode</span>
+            <label class="switch dark_mode">
+                <input type="checkbox" (click)="ToggleDarkMode($event)">
+                <span class="slider round"></span>
+            </label>
+        </li>
+        <li class="list-group-item d-flex align-items-center justify-content-between">
+            <span>RTL version</span>
+            <label class="switch rtl_mode">
+                <input type="checkbox" (click)="ToggleRTL($event)">
+                <span class="slider round"></span>
+            </label>
+        </li>
+    </ul>
+    <hr>
+    <div>
+        <a href="https://themeforest.net/item/mooli-responsive-admin-dashboard-template/26561151"
+            class="btn btn-dark btn-block" target="_blank">Buy this item</a>
+        <a href="https://themeforest.net/user/puffintheme/portfolio" target="_blank"
+            class="btn btn-primary theme-bg gradient btn-block">View Portfolio</a>
+    </div>
+</div>
+
+<!-- Overlay For Sidebars -->
+<div class="overlay" (click)="closeMenu()"></div>
+
+<div id="wrapper">
+
+    <router-outlet></router-outlet>
+</div>

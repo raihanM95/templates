@@ -1,0 +1,140 @@
+<!-- Main left sidebar menu -->
+<div id="left-sidebar" class="sidebar light_active">
+    <a href="javascript:void(0);" (click)="toggleMenu()" class="menu_toggle"><i class="fa fa-angle-left"></i></a>
+    <div class="navbar-brand">
+        <a [routerLink]="['/dashboard']" href="javascript:void(0)"><img src="assets/images/icon.svg" alt="Mooli Logo"
+                class="img-fluid logo"><span>Mooli</span> Hospital</a>
+        <button type="button" (click)="cToggoleMenu()" class="btn-toggle-offcanvas btn btn-sm float-right"><i
+                class="fa fa-close"></i></button>
+    </div>
+    <div class="sidebar-scroll">
+        <div class="user-account">
+            <div class="user_div">
+                <img src="assets/images/user.png" class="user-photo" alt="User Profile Picture">
+            </div>
+            <div class="dropdown">
+                <span>Web Developer,</span>
+                <a href="javascript:void(0);" class="dropdown-toggle user-name" (click)="showDropDown()"
+                    data-toggle="dropdown"><strong>Dr.Alan
+                        Green</strong></a>
+                <ul class="dropdown-menu dropdown-menu-right account vivify flipInY" id="drp">
+                    <li><a [routerLink]="['/doctors-profile']" href="javascript:void(0)"><i class="fa fa-user"></i>My
+                            Profile</a></li>
+                    <li><a [routerLink]="['/app-inbox']" href="javascript:void(0)"><i
+                                class="fa fa-envelope"></i>Messages</a></li>
+                    <li><a [routerLink]="['/settings']" href="javascript:void(0)"><i class="fa fa-gear"></i>Settings</a>
+                    </li>
+                    <li class="divider"></li>
+                    <li><a [routerLink]="['/login']" href="javascript:void(0)"><i class="fa fa-power-off"></i>Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <nav id="left-sidebar-nav" class="sidebar-nav">
+            <ul id="main-menu" class="metismenu animation-li-delay">
+                <li class="header">Hospital</li>
+                <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a
+                        [routerLink]="['/dashboard']" href="javascript:void(0)"><i class="fa fa-dashboard"></i>
+                        <span>Dashboard</span></a></li>
+
+
+                <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
+                    <a (click)="isCollapsed = !isCollapsed" [attr.aria-expanded]="!isCollapsed"
+                        aria-controls="collapseBasic" class="has-arrow"><i
+                            class="fa fa-user-md"></i><span>Doctors</span></a>
+                    <ul id="collapseBasic" [collapse]="isCollapsed" [isAnimated]="true">
+                        <li><a [routerLink]="['/all-doctors']" href="javascript:void(0)">All Doctors</a></li>
+                        <li><a [routerLink]="['/add-doctors']" href="javascript:void(0)">Add Doctors</a></li>
+                        <li><a [routerLink]="['/doctors-profile']" href="javascript:void(0)">Doctors Profile</a>
+                        </li>
+                        <li><a [routerLink]="['/doctors-schedule']" href="javascript:void(0)">Doctors Schedule</a></li>
+
+                    </ul>
+                </li>
+                <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a
+                        [routerLink]="['/appointments']" href="javascript:void(0)"><i class="fa fa-calendar"></i>
+                        <span>Appointment</span></a></li>
+                <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a
+                        [routerLink]="['/todolist']" href="javascript:void(0)"><i class="fa fa-th-list"></i> <span>Todo
+                            List</span></a></li>
+                <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
+                    <a (click)="PatientCollapsed = !PatientCollapsed" [attr.aria-expanded]="!PatientCollapsed"
+                        aria-controls="collapseBasic" href="javascript:void(0)" class="has-arrow"><i
+                            class="fa fa-user-circle-o"></i><span>Patients</span></a>
+                    <ul id="collapseBasic" [collapse]="PatientCollapsed" [isAnimated]="true">
+                        <li><a [routerLink]="['/patients/all-patients']" href="javascript:void(0)">All Patient</a></li>
+                        <li><a [routerLink]="['/patients/add-patient']" href="javascript:void(0)">Add Patient</a></li>
+                        <li><a [routerLink]="['/patients/patient-profile']" href="javascript:void(0)">Patient
+                                Profile</a></li>
+                        <li><a [routerLink]="['/patients/patient-invoices']" href="javascript:void(0)">Patient
+                                Invoices</a></li>
+                    </ul>
+                </li>
+                <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
+                    <a (click)="RoomCollapsed = !RoomCollapsed" [attr.aria-expanded]="!RoomCollapsed"
+                        aria-controls="collapseBasic" href="javascript:void(0)" class="has-arrow"><i
+                            class="fa fa-thumbs-up"></i><span>Room Allotment</span></a>
+                    <ul id="collapseBasic" [collapse]="RoomCollapsed" [isAnimated]="true">
+                        <li><a [routerLink]="['/room-allotment/alloted-rooms']" href="javascript:void(0)">Alloted
+                                Rooms</a></li>
+                        <li><a [routerLink]="['/room-allotment/add-alloted-rooms']" href="javascript:void(0)">Add
+                                Allotment</a></li>
+                    </ul>
+                </li>
+                <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a
+                        [routerLink]="['/departments']"><i class="fa fa-table"></i><span>Departments</span></a></li>
+                <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
+                    <a (click)="PaymentCollapsed = !PaymentCollapsed" [attr.aria-expanded]="!PaymentCollapsed"
+                        aria-controls="collapseBasic" href="javascript:void(0)" class="has-arrow"><i
+                            class="fa fa-cc-paypal"></i><span>Payments</span></a>
+                    <ul id="collapseBasic" [collapse]="PaymentCollapsed" [isAnimated]="true">
+                        <li><a [routerLink]="['/payments']" href="javascript:void(0)">Payments</a></li>
+                        <li><a [routerLink]="['/payments/addpayment']" href="javascript:void(0)">Add Payments</a></li>
+                        <li><a [routerLink]="['/payments/invoices']" href="javascript:void(0)">Invoice</a></li>
+                    </ul>
+                </li>
+                <li class="header">Admin</li>
+                <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a
+                        [routerLink]="['/app-inbox']" href="javascript:void(0)"><i class="fa fa-envelope"></i>
+                        <span>Email</span> <span class="badge badge-default mr-0">12</span></a></li>
+                <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a
+                        [routerLink]="['/app-chat']" href="javascript:void(0)"><i class="fa fa-comments"></i>
+                        <span>Chat</span></a></li>
+                <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a
+                        [routerLink]="['/our-staff']" href="javascript:void(0)"><i class="fa fa-users"></i><span>Our
+                            Staffs</span></a></li>
+                <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a
+                        [routerLink]="['/contacts']" href="javascript:void(0)"><i class="fa fa-address-book"></i>
+                        <span>Contacts</span></a></li>
+                <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a
+                        [routerLink]="['/filemanager']" href="javascript:void(0)"><i class="fa fa-folder"></i>
+                        <span>File Manager</span></a></li>
+                <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a
+                        [routerLink]="['/our-centers']" href="javascript:void(0)"><i
+                            class="fa fa-map-marker"></i><span>Our Centres</span></a></li>
+                <li class="header">Social</li>
+                <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a [routerLink]="['/blog']"
+                        href="javascript:void(0)"><i class="fa fa-globe"></i> <span>Blog</span></a></li>
+                <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a
+                        [routerLink]="['/social']" href="javascript:void(0)"><i class="fa fa-share-alt-square"></i>
+                        <span>Social</span></a></li>
+                <li class="extra_widget">
+                    <div class="form-group">
+                        <label class="d-block">Traffic this Month <span class="float-right">77%</span></label>
+                        <div class="progress progress-xxs">
+                            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="77"
+                                aria-valuemin="0" aria-valuemax="100" style="width: 77%;"></div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="d-block">Server Load <span class="float-right">50%</span></label>
+                        <div class="progress progress-xxs">
+                            <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="50"
+                                aria-valuemin="0" aria-valuemax="100" style="width: 50%;"></div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>

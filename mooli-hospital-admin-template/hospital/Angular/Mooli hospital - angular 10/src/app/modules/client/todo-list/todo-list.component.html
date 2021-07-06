@@ -1,0 +1,194 @@
+<app-header></app-header>
+
+<div id="main-content">
+    <div class="container-fluid">
+        <!-- Page header section  -->
+        <div class="block-header">
+            <div class="row clearfix">
+                <div class="col-xl-6 col-md-5 col-sm-12">
+                    <h1>Hi, Welcomeback!</h1>
+                    <span>JustDo Todo list,</span>
+                </div>
+                <div class="col-xl-6 col-md-7 col-sm-12 text-md-right">
+                    <div
+                        class="d-flex align-items-center justify-content-md-end mt-4 mt-md-0 flex-wrap vivify pullUp delay-550">
+                        <div class="mb-3 mb-xl-0">
+                            <a [routerLink]="['/settings']" href="javascript:void(0)"
+                                class="btn btn-default">Settings</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row clearfix">
+            <div class="col-12">
+                <div class="card">
+                    <nav class="navbar navbar-expand-lg page_menu">
+                        <a class="navbar-brand" href="#">M.</a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                            data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                            <i class="fa fa-bars text-muted"></i>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                            <ul class="navbar-nav mr-auto">
+                                <li class="nav-item active"><a class="nav-link" href="app-todo.html">ToDo List</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#">Done</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#">Important</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#">Trash</a></li>
+                            </ul>
+
+                            <div class="ml-auto">
+                                <button type="button" class="btn btn-primary theme-bg gradient"
+                                    (click)="openModal(template)">Add Todo</button>
+                            </div>
+                        </div>
+                    </nav>
+                    <div class="body">
+                        <ul class="todo_list list-unstyled">
+                            <li>
+                                <label class="fancy-checkbox">
+                                    <input type="checkbox" name="checkbox">
+                                    <span>
+                                        <div class="d-flex justify-content-between">
+                                            <span class="font-18 mb-1">Transplant heart surgery </span>
+                                            <div>
+                                                <a href="#" class="text-info mr-3" title="Rescheduled"><i
+                                                        class="fa fa-calendar"></i></a>
+                                                <a href="#" class="text-danger"><i class="fa fa-trash"></i></a>
+                                            </div>
+                                        </div>
+                                        <small class="font-12 text-muted"><strong>Patient: </strong> Pierce Pierce <span
+                                                class="badge badge-secondary">34 age</span></small>
+                                        <p><strong>Detail: </strong> imperdiet aliquam risus, eu commodo urna vestibulum
+                                            at. Suspendisse malesuada lorem eu sodales aliquam.</p>
+                                        <div class="avatar-list avatar-list-stacked">
+                                            <img class="avatar avatar sm" src="assets/images/xs/avatar5.jpg"
+                                                data-toggle="tooltip" tooltip="Avtar" title=""
+                                                data-original-title="Avatar">
+                                            <img class="avatar avatar sm" src="assets/images/xs/avatar6.jpg"
+                                                data-toggle="tooltip" tooltip="Avtar" title=""
+                                                data-original-title="Avatar">
+                                            <img class="avatar avatar sm" src="assets/images/xs/avatar1.jpg"
+                                                data-toggle="tooltip" tooltip="Avtar" title=""
+                                                data-original-title="Avatar">
+                                            <img class="avatar avatar sm" src="assets/images/xs/avatar4.jpg"
+                                                data-toggle="tooltip" tooltip="Avtar" title=""
+                                                data-original-title="Avatar">
+                                        </div>
+                                    </span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="fancy-checkbox">
+                                    <input type="checkbox" name="checkbox" checked>
+                                    <span>
+                                        <div class="d-flex justify-content-between">
+                                            <span class="font-18 mb-1">Knee transplant surgery </span>
+                                            <div>
+                                                <a href="#" class="text-info mr-3" title="Rescheduled"><i
+                                                        class="fa fa-calendar"></i></a>
+                                                <a href="#" class="text-danger"><i class="fa fa-trash"></i></a>
+                                            </div>
+                                        </div>
+                                        <small class="font-12 text-muted"><strong>Patient: </strong> Jason Porter <span
+                                                class="badge badge-secondary">56 age</span></small>
+                                        <p><strong>Detail: </strong> imperdiet aliquam risus, eu commodo urna vestibulum
+                                            at. Suspendisse malesuada lorem eu sodales aliquam.</p>
+                                        <div class="avatar-list avatar-list-stacked">
+                                            <img class="avatar avatar sm" src="assets/images/xs/avatar1.jpg"
+                                                data-toggle="tooltip" tooltip="Avtar" title=""
+                                                data-original-title="Avatar">
+                                            <img class="avatar avatar sm" src="assets/images/xs/avatar2.jpg"
+                                                data-toggle="tooltip" tooltip="Avtar" title=""
+                                                data-original-title="Avatar">
+                                        </div>
+                                    </span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="fancy-checkbox">
+                                    <input type="checkbox" name="checkbox">
+                                    <span>
+                                        <div class="d-flex justify-content-between">
+                                            <span class="font-18 mb-1">Hair loss after kidney transplant surgery</span>
+                                            <div>
+                                                <a href="#" class="text-info mr-3" title="Rescheduled"><i
+                                                        class="fa fa-calendar"></i></a>
+                                                <a href="#" class="text-danger"><i class="fa fa-trash"></i></a>
+                                            </div>
+                                        </div>
+                                        <small class="font-12 text-muted"><strong>Patient: </strong> David Wallace <span
+                                                class="badge badge-secondary">28 age</span></small>
+                                        <p><strong>Detail: </strong> imperdiet aliquam risus, eu commodo urna vestibulum
+                                            at. Suspendisse malesuada lorem eu sodales aliquam.</p>
+                                        <div class="avatar-list avatar-list-stacked">
+                                            <img class="avatar avatar sm" src="assets/images/xs/avatar8.jpg"
+                                                data-toggle="tooltip" tooltip="Avtar" title=""
+                                                data-original-title="Avatar">
+                                        </div>
+                                    </span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="fancy-checkbox">
+                                    <input type="checkbox" name="checkbox">
+                                    <span>
+                                        <div class="d-flex justify-content-between">
+                                            <span class="font-18 mb-1">Transplant heart surgery </span>
+                                            <div>
+                                                <a href="#" class="text-info mr-3" title="Rescheduled"><i
+                                                        class="fa fa-calendar"></i></a>
+                                                <a href="#" class="text-danger"><i class="fa fa-trash"></i></a>
+                                            </div>
+                                        </div>
+                                        <small class="font-12 text-muted"><strong>Patient: </strong> Pierce Pierce <span
+                                                class="badge badge-secondary">34 age</span></small>
+                                        <p><strong>Detail: </strong> imperdiet aliquam risus, eu commodo urna vestibulum
+                                            at. Suspendisse malesuada lorem eu sodales aliquam.</p>
+                                        <div class="avatar-list avatar-list-stacked">
+                                            <img class="avatar avatar sm" src="assets/images/xs/avatar2.jpg"
+                                                data-toggle="tooltip" tooltip="Avtar" title=""
+                                                data-original-title="Avatar">
+                                            <img class="avatar avatar sm" src="assets/images/xs/avatar3.jpg"
+                                                data-toggle="tooltip" tooltip="Avtar" title=""
+                                                data-original-title="Avatar">
+                                            <img class="avatar avatar sm" src="assets/images/xs/avatar7.jpg"
+                                                data-toggle="tooltip" tooltip="Avtar" title=""
+                                                data-original-title="Avatar">
+                                        </div>
+                                    </span>
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<ng-template #template>
+    <div class="modal-header">
+        <h5 class="modal-title" id="defaultModalLabel">Add Todo</h5>
+    </div>
+    <div class="modal-body">
+        <div class="form-group c_form_group">
+            <label>Todo Title</label>
+            <div class="form-line">
+                <input type="text" class="form-control" placeholder="Todo Title">
+            </div>
+        </div>
+        <div class="form-group c_form_group">
+            <label>Description</label>
+            <div class="form-line">
+                <textarea rows="4" class="form-control no-resize" placeholder="Todo Description..."></textarea>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" (click)="modalRef.hide()">Close</button>
+        <button type="button" class="btn btn-primary theme-bg gradient" style="background-color: #6cb440;">Add</button>
+    </div>
+</ng-template>

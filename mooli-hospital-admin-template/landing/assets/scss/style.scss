@@ -1,0 +1,22 @@
+/* === Import template variables === */
+@import "variables";
+
+/*-------------------------------------------------------------------*/
+/* === Core Styles === */
+@import "reset";
+@import "fonts";
+@import "typography";
+@import "footer";
+@import "navbar";
+@import "main";
+@import "testimonial";
+@import "pricing";
+
+/*-------------------------------------------------------------------*/
+/* === Components === */
+@import "components/buttons";
+@import "components/forms";
+@import "components/toggle-switch";
+@import "components/owl-carousel";
+@import "components/flipster";
+

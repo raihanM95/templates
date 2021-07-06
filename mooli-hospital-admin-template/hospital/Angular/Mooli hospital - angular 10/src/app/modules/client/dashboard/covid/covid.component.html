@@ -1,0 +1,551 @@
+<app-header></app-header>
+
+<div id="main-content">
+    <div class="container-fluid">
+        <!-- Page header section  -->
+        <div class="block-header">
+            <div class="row clearfix">
+                <div class="col-lg-4 col-md-12 col-sm-12">
+                    <h1>Hi, Welcomeback!</h1>
+                    <span>JustDo Covid 19 Analytics,</span>
+                </div>
+                <div class="col-lg-8 col-md-12 col-sm-12 text-lg-right">
+                    <div
+                        class="d-flex align-items-center justify-content-lg-end mt-4 mt-lg-0 flex-wrap vivify pullUp delay-550">
+                        <div class="border-right pr-4 mr-4 mb-2 mb-xl-0 hidden-xs">
+                            <p class="text-muted mb-1">Operation <span id="mini-bar-chart3"
+                                    class="mini-bar-chart"></span></p>
+                            <h5 class="mb-0">29</h5>
+                        </div>
+                        <div class="border-right pr-4 mr-4 mb-2 mb-xl-0">
+                            <p class="text-muted mb-1">Earning <span id="mini-bar-chart2" class="mini-bar-chart"></span>
+                            </p>
+                            <h5 class="mb-0">$981</h5>
+                        </div>
+                        <div class="mb-3 mb-xl-0">
+                            <p class="text-muted mb-1">Revenue <span id="mini-bar-chart1" class="mini-bar-chart"></span>
+                            </p>
+                            <h5 class="mb-0">$56 M</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row clearfix">
+            <div class="col-12">
+                <nav class="navbar navbar-expand-lg page_menu">
+                    <a class="navbar-brand" href="#">M.</a>
+                    <button class="navbar-toggler" (click)="dashboardMenu()" type="button" data-toggle="collapse"
+                        data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <i class="fa fa-bars text-muted"></i>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item"><a class="nav-link" [routerLink]="['/dashboard']"
+                                    href="javascript:void(0)">Analytics</a></li>
+                            <li class="nav-item active"><a class="nav-link" [routerLink]="['/covid-19']"
+                                    href="javascript:void(0)">Covid 19 Dashboard</a></li>
+                        </ul>
+                        <div class="ml-auto">
+                            <a [routerLink]="['/todolist']" href="javascript:void(0)"
+                                class="btn btn-default mr-2">ToDo</a>
+                            <a [routerLink]="['/settings']" href="javascript:void(0)"
+                                class="btn btn-default">Settings</a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+            <div class="col-12">
+                <div class="card theme-bg gradient">
+                    <div class="body">
+                        <div class="row">
+                            <div class="col-lg-3 col-md-6">
+                                <div class="card">
+                                    <div class="body">
+                                        <div>Active cases</div>
+                                        <div class="mt-3 h1">35</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6">
+                                <div class="card">
+                                    <div class="body">
+                                        <div>Recovered cases</div>
+                                        <div class="mt-3 h1">22</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6">
+                                <div class="card">
+                                    <div class="body">
+                                        <div>Fatal cases</div>
+                                        <div class="mt-3 h1">12</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6">
+                                <div class="card">
+                                    <div class="body">
+                                        <div>Total cases</div>
+                                        <div class="mt-3 h1">264</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- page section title  -->
+        <div class="row clearfix">
+            <div class="col-12">
+                <div class="section_title">
+                    <div class="mr-3">
+                        <div class="row">
+                            <div class="col-auto">
+                                <div class="stamp stamp-md bg-info">
+                                    <i class="fa fa-hospital-o"></i>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <h3>Hospital Overview</h3>
+                                <small>Statistics, Predictive Analytics Data Visualization etc.</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="btn-group mb-3">
+                            <div class="btn-group" role="group" dropdown>
+                                <button id="btnGroupDrop1" type="button" class="btn btn-default dropdown-toggle"
+                                    data-toggle="dropdown" id="button-basic" dropdownToggle
+                                    aria-controls="dropdown-basic">14 June 2020</button>
+                                <div id="dropdown-basic" *dropdownMenu class="dropdown-menu" role="menu"
+                                    aria-labelledby="button-basic">
+                                    <a class="dropdown-item" href="javascript:void(0);">Today’s</a>
+                                    <a class="dropdown-item" href="javascript:void(0);">This Week</a>
+                                    <a class="dropdown-item" href="javascript:void(0);">Last Week</a>
+                                    <a class="dropdown-item" href="javascript:void(0);">This Month</a>
+                                    <a class="dropdown-item" href="javascript:void(0);">Last Month</a>
+                                    <a class="dropdown-item" href="javascript:void(0);">Last 12 Month</a>
+                                    <a class="dropdown-item" href="javascript:void(0);">Custom Dates</a>
+                                </div>
+                            </div>
+                            <button type="button" class="btn btn-default"><i class="fa fa-send"></i> <span
+                                    class="hidden-md"> Report</span></button>
+                            <button type="button" class="btn btn-default"><i class="fa fa-file-pdf-o"></i> <span
+                                    class="hidden-md"> Export</span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row clearfix row-deck">
+            <div class="col-12">
+                <div class="card">
+                    <div class="body">
+                        <div class="form-group c_form_group bg-white">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Search here...">
+                                <div class="input-group-append"><button class="btn btn-primary btn-sm theme-bg gradient"
+                                        type="button">Search</button></div>
+                            </div>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table mb-0 table-borderless table-hover">
+                                <thead>
+                                    <tr>
+                                        <th><strong>#</strong></th>
+                                        <th><strong>Patient Name</strong></th>
+                                        <th><strong>Doctors Team</strong></th>
+                                        <th><strong>Admit Date</strong></th>
+                                        <th><strong>Report</strong></th>
+                                        <th><strong>Ward Number</strong></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>B-865</td>
+                                        <td>
+                                            <div class="media mb-0">
+                                                <img src="assets/images/xs/avatar1.jpg" data-toggle="tooltip"
+                                                    data-placement="top" tooltip="Avatar Name" title="" alt="Avatar"
+                                                    class="rounded-circle w35" data-original-title="Avatar Name">
+                                                <div class="media-body ml-3">
+                                                    <h6 class="m-0">Michelle Schultz</h6>
+                                                    <span class="text-muted font-12">123 6th St. Melbourne, FL
+                                                        32904</span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="avatar-list avatar-list-stacked">
+                                                <img class="avatar avatar sm" tooltip="Avatar"
+                                                    src="assets/images/xs/avatar5.jpg" data-toggle="tooltip" title=""
+                                                    data-original-title="Avatar">
+                                                <img class="avatar avatar sm" src="assets/images/xs/avatar6.jpg"
+                                                    data-toggle="tooltip" title="" tooltip="Avatar"
+                                                    data-original-title="Avatar">
+                                                <img class="avatar avatar sm" src="assets/images/xs/avatar4.jpg"
+                                                    data-toggle="tooltip" title="" tooltip="Avatar"
+                                                    data-original-title="Avatar">
+                                            </div>
+                                        </td>
+                                        <td>15-06-2020</td>
+                                        <td><a href="#"><i class="fa fa-file-pdf-o text-danger font-16"></i></a></td>
+                                        <td>B/102</td>
+                                    </tr>
+                                    <tr>
+                                        <td>B-231</td>
+                                        <td>
+                                            <div class="media mb-0">
+                                                <img src="assets/images/xs/avatar2.jpg" data-toggle="tooltip"
+                                                    data-placement="top" tooltip="Avatar Name" title="" alt="Avatar"
+                                                    class="rounded-circle w35" data-original-title="Avatar Name">
+                                                <div class="media-body ml-3">
+                                                    <h6 class="m-0">Deborah Cox</h6>
+                                                    <span class="text-muted font-12">514 S. Magnolia St. Orlando, FL
+                                                        32806</span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="avatar-list avatar-list-stacked">
+                                                <img class="avatar avatar sm" tooltip="Avatar"
+                                                    src="assets/images/xs/avatar8.jpg" data-toggle="tooltip" title=""
+                                                    data-original-title="Avatar">
+                                                <img class="avatar avatar sm" tooltip="Avatar"
+                                                    src="assets/images/xs/avatar1.jpg" data-toggle="tooltip" title=""
+                                                    data-original-title="Avatar">
+                                            </div>
+                                        </td>
+                                        <td>15-06-2020</td>
+                                        <td><a href="#"><i class="fa fa-file-pdf-o text-danger font-16"></i></a></td>
+                                        <td>B/103</td>
+                                    </tr>
+                                    <tr>
+                                        <td>B-781</td>
+                                        <td>
+                                            <div class="media mb-0">
+                                                <img src="assets/images/xs/avatar3.jpg" data-toggle="tooltip"
+                                                    data-placement="top" title="" tooltip="Avatar Name" alt="Avatar"
+                                                    class="rounded-circle w35" data-original-title="Avatar Name">
+                                                <div class="media-body ml-3">
+                                                    <h6 class="m-0">Denise Elliott</h6>
+                                                    <span class="text-muted font-12">44 Shirley Ave. West Chicago, IL
+                                                        60185</span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="avatar-list avatar-list-stacked">
+                                                <img class="avatar avatar sm" tooltip="Avatar"
+                                                    src="assets/images/xs/avatar9.jpg" data-toggle="tooltip" title=""
+                                                    data-original-title="Avatar">
+                                            </div>
+                                        </td>
+                                        <td>15-06-2020</td>
+                                        <td><a href="#"><i class="fa fa-file-pdf-o text-danger font-16"></i></a></td>
+                                        <td>B/104</td>
+                                    </tr>
+                                    <tr>
+                                        <td>B-454</td>
+                                        <td>
+                                            <div class="media mb-0">
+                                                <img src="assets/images/xs/avatar4.jpg" tooltip="Avatar Name"
+                                                    data-toggle="tooltip" data-placement="top" title="" alt="Avatar"
+                                                    class="rounded-circle w35" data-original-title="Avatar Name">
+                                                <div class="media-body ml-3">
+                                                    <h6 class="m-0">Rose Coke</h6>
+                                                    <span class="text-muted font-12">70 Bowman St. South Windsor, CT
+                                                        06074</span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="avatar-list avatar-list-stacked">
+                                                <img class="avatar avatar sm" tooltip="Avatar"
+                                                    src="assets/images/xs/avatar8.jpg" data-toggle="tooltip" title=""
+                                                    data-original-title="Avatar">
+                                                <img class="avatar avatar sm" src="assets/images/xs/avatar1.jpg"
+                                                    data-toggle="tooltip" title="" tooltip="Avatar"
+                                                    data-original-title="Avatar">
+                                                <img class="avatar avatar sm" src="assets/images/xs/avatar6.jpg"
+                                                    data-toggle="tooltip" title="" tooltip="Avatar"
+                                                    data-original-title="Avatar">
+                                            </div>
+                                        </td>
+                                        <td>15-06-2020</td>
+                                        <td><a href="#"><i class="fa fa-file-pdf-o text-danger font-16"></i></a></td>
+                                        <td>B/105</td>
+                                    </tr>
+                                    <tr>
+                                        <td>B-988</td>
+                                        <td>
+                                            <div class="media mb-0">
+                                                <img src="assets/images/xs/avatar5.jpg" tooltip="Avatar Name"
+                                                    data-toggle="tooltip" data-placement="top" title="" alt="Avatar"
+                                                    class="rounded-circle w35" data-original-title="Avatar Name">
+                                                <div class="media-body ml-3">
+                                                    <h6 class="m-0">Terry Carter</h6>
+                                                    <span class="text-muted font-12">514 S. Magnolia St. Orlando, FL
+                                                        32806</span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="avatar-list avatar-list-stacked">
+                                                <img class="avatar avatar sm" tooltip="Avatar"
+                                                    src="assets/images/xs/avatar8.jpg" data-toggle="tooltip" title=""
+                                                    data-original-title="Avatar">
+                                                <img class="avatar avatar sm" tooltip="Avatar"
+                                                    src="assets/images/xs/avatar1.jpg" data-toggle="tooltip" title=""
+                                                    data-original-title="Avatar">
+                                            </div>
+                                        </td>
+                                        <td>15-06-2020</td>
+                                        <td><a href="#"><i class="fa fa-file-pdf-o text-danger font-16"></i></a></td>
+                                        <td>B/106</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- page section title  -->
+        <div class="row clearfix">
+            <div class="col-12">
+                <div class="section_title">
+                    <div class="mr-3">
+                        <div class="row">
+                            <div class="col-auto">
+                                <div class="stamp stamp-md bg-danger">
+                                    <i class="fa fa-globe"></i>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <h3>Global Analytics</h3>
+                                <small>Statistics, Predictive Analytics Data Visualization etc.</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="btn-group mb-3">
+                            <div class="btn-group" role="group" dropdown>
+                                <button id="btnGroupDrop1" type="button" class="btn btn-default dropdown-toggle"
+                                    data-toggle="dropdown" id="button-basic" dropdownToggle
+                                    aria-controls="dropdown-basic">15 Aug 2020</button>
+                                <div id="dropdown-basic" *dropdownMenu class="dropdown-menu" role="menu"
+                                    aria-labelledby="button-basic">
+                                    <a class="dropdown-item" href="javascript:void(0);">Today’s</a>
+                                    <a class="dropdown-item" href="javascript:void(0);">This Week</a>
+                                    <a class="dropdown-item" href="javascript:void(0);">Last Week</a>
+                                    <a class="dropdown-item" href="javascript:void(0);">This Month</a>
+                                    <a class="dropdown-item" href="javascript:void(0);">Last Month</a>
+                                    <a class="dropdown-item" href="javascript:void(0);">Last 12 Month</a>
+                                    <a class="dropdown-item" href="javascript:void(0);">Custom Dates</a>
+                                </div>
+                            </div>
+                            <button type="button" class="btn btn-default"><i class="fa fa-send"></i> <span
+                                    class="hidden-md"> Report</span></button>
+                            <button type="button" class="btn btn-default"><i class="fa fa-file-pdf-o"></i> <span
+                                    class="hidden-md"> Export</span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row clearfix row-deck">
+            <div class="col-lg-3 col-md-6">
+                <div class="card">
+                    <div class="body">
+                        <div class="font-13">CONFIRMED CASES</div>
+                        <div class="py-4 m-0 h3">1,45,220</div>
+                        <div class="d-flex">
+                            <small class="text-muted">Last 30 Days</small>
+                            <div class="ml-auto"><i class="fa fa-caret-up text-success"></i>1.4%</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="card">
+                    <div class="body">
+                        <div class="font-13">REPORTED DEATHS</div>
+                        <div class="py-4 m-0 h3">27,092</div>
+                        <div class="d-flex">
+                            <small class="text-muted">Last 30 Days</small>
+                            <div class="ml-auto"><i class="fa fa-caret-down text-danger"></i>3.45%</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="card">
+                    <div class="body">
+                        <div class="font-13">RECOVERED</div>
+                        <div class="py-4 m-0 h3">1,00,878</div>
+                        <div class="d-flex">
+                            <small class="text-muted">Last 30 Days</small>
+                            <div class="ml-auto"><i class="fa fa-caret-up text-success"></i>10%</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="card">
+                    <div class="body">
+                        <div class="font-13">HELP LINE</div>
+                        <div class="py-4 m-0 h3">+ 264-625-2323</div>
+                        <div class="d-flex">
+                            <small class="text-muted">24/7 Available</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row clearfix">
+            <div class="col-xl-12">
+                <div class="card">
+                    <div class="body">
+                        <div class="d-flex flex-row">
+                            <div class="pb-3">
+                                <h5 class="mb-0">12,89,356</h5>
+                                <small class="text-muted font-11">Male</small>
+                            </div>
+                            <div class="pb-3 pl-4 pr-4">
+                                <h5 class="mb-0">1,89,198</h5>
+                                <small class="text-muted font-11">Female</small>
+                            </div>
+                            <div class="ml-auto">
+                                <div class="btn-group btn-group-sm">
+                                    <button type="button" class="btn btn-sm btn-default">Day</button>
+                                    <button type="button" class="btn btn-sm btn-default">Week</button>
+                                    <button type="button"
+                                        class="btn btn-sm btn-primary theme-bg gradient">Month</button>
+                                </div>
+                            </div>
+                        </div>
+                        <img src="assets/images/map.png" style="width: 100%;">
+                        <!-- <app-worldmap></app-worldmap> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row clearfix">
+            <div class="col-sm-12">
+                <div class="card">
+                    <div class="body">
+                        <form>
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Search here...">
+                                <div class="input-group-append">
+                                    <span class="input-group-text" id="search-mail"><i
+                                            class="icon-magnifier"></i></span>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table table-hover mb-0">
+                            <thead>
+                                <tr>
+                                    <th>PLACES</th>
+                                    <th>CONFIRMED CASES</th>
+                                    <th>REPORTED DEATHS</th>
+                                    <th>RECOVERED</th>
+                                    <th>HELP LINE</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><a href="#" title="">United States</a></td>
+                                    <td>2,255,119</td>
+                                    <td>119,719</td>
+                                    <td>617,460</td>
+                                    <td>+ 264-625-5858</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#" title="">Brazil</a></td>
+                                    <td>2,122,119</td>
+                                    <td>109,719</td>
+                                    <td>217,460</td>
+                                    <td>+ 264-625-1212</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#" title="">Russia</a></td>
+                                    <td>2,000,453</td>
+                                    <td>110,211</td>
+                                    <td>17,460</td>
+                                    <td>+ 264-625-1313</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#" title="">India</a></td>
+                                    <td>255,674</td>
+                                    <td>19,098</td>
+                                    <td>67,122</td>
+                                    <td>+ 264-625-1414</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#" title="">United Kingdom</a></td>
+                                    <td>255,119</td>
+                                    <td>11,719</td>
+                                    <td>6,152</td>
+                                    <td>+ 264-625-1515</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#" title="">Peru</a></td>
+                                    <td>55,119</td>
+                                    <td>10,719</td>
+                                    <td>617,460</td>
+                                    <td>+ 264-625-1616</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#" title="">Spain</a></td>
+                                    <td>1,02,119</td>
+                                    <td>119,441</td>
+                                    <td>2,091</td>
+                                    <td>+ 264-625-2323</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#" title="">Italy</a></td>
+                                    <td>2,255,119</td>
+                                    <td>119,719</td>
+                                    <td>3,460</td>
+                                    <td>+ 264-625-2525</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#" title="">Saudi Arabia</a></td>
+                                    <td>2,322</td>
+                                    <td>1,719</td>
+                                    <td>1,460</td>
+                                    <td>+ 264-625-2727</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#" title="">Bangladesh</a></td>
+                                    <td>2,119</td>
+                                    <td>1,122</td>
+                                    <td>1,321</td>
+                                    <td>+ 264-625-5453</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination">
+                        <li class="page-item"><a class="page-link" href="javascript:void(0);">Previous</a></li>
+                        <li class="page-item active"><a class="page-link" href="javascript:void(0);">1</a></li>
+                        <li class="page-item"><a class="page-link" href="javascript:void(0);">2</a></li>
+                        <li class="page-item"><a class="page-link" href="javascript:void(0);">3</a></li>
+                        <li class="page-item"><a class="page-link" href="javascript:void(0);">Next</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>

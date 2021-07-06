@@ -1,0 +1,131 @@
+<app-header></app-header>
+
+<div id="main-content">
+
+    <div class="container-fluid">
+        <!-- Page header section  -->
+        <div class="block-header">
+            <div class="row clearfix">
+                <div class="col-lg-4 col-md-12 col-sm-12">
+                    <h1>Hi, Welcomeback!</h1>
+                    <span>JustDo Doctor schedule,</span>
+                </div>
+                <div class="col-xl-8 col-md-12 col-sm-12 text-md-right">
+                    <div
+                        class="d-flex align-items-center justify-content-md-end mt-4 mt-md-0 flex-wrap vivify pullUp delay-550">
+                        <div class="border-right pr-4 mr-4 mb-3 mb-xl-0 hidden-xs">
+                            <p class="text-muted mb-1">Travel</p>
+                            <h5 class="mb-0">12</h5>
+                        </div>
+                        <div class="border-right pr-4 mr-4 mb-3 mb-xl-0">
+                            <p class="text-muted mb-1">Important</p>
+                            <h5 class="mb-0">13</h5>
+                        </div>
+                        <div class="pr-4 mb-3 mb-xl-0">
+                            <p class="text-muted mb-1">Work</p>
+                            <h5 class="mb-0">25</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row clearfix">
+            <div class="col-md-12 social">
+                <div class="card">
+                    <div class="profile-header d-flex justify-content-between justify-content-center theme-bg gradient">
+                        <div class="d-flex">
+                            <div class="mr-3">
+                                <img src="assets/images/user.png" class="rounded" alt="">
+                            </div>
+                            <div class="details">
+                                <h5 class="mb-0">Dr. Alan Green</h5>
+                                <span class="text-light">Gynaecologist</span>
+                                <p class="mb-0">795 Folsom Ave, Suite 600 San Francisco, 94107</p>
+                            </div>
+                        </div>
+                        <div>
+                            <button class="btn btn-default btn-sm">View Profile</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <nav class="navbar navbar-expand-lg page_menu">
+                    <a class="navbar-brand" href="#">M.</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fa fa-bars text-muted"></i>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item active"><a class="nav-link" [routerLink]="['/doctors-schedule']"
+                                    href="javascript:void(0)">Calendar</a></li>
+                            <li class="nav-item"><a class="nav-link" [routerLink]="['/doctorschedule/events']"
+                                    href="javascript:void(0)">Events</a></li>
+                            <li class="nav-item"><a class="nav-link" href="javascript:void(0)">Campaign</a></li>
+                            <li class="nav-item"><a class="nav-link" href="javascript:void(0)">Conference</a></li>
+                        </ul>
+                        <div class="ml-auto">
+                            <a [routerLink]="['/settings']" href="javascript:void(0)"
+                                class="btn btn-default">Settings</a>
+                            <button type="button" class="btn btn-secondary ml-1" (click)="openModal(template)">Add
+                                New Event</button>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+            <div class="col-12">
+                <div class="card">
+                    <div class="body">
+                        <app-fullcalender></app-fullcalender>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<ng-template #template>
+    <div class="modal-header">
+        <h5 class="modal-title" id="defaultModalLabel">Add Event</h5>
+    </div>
+    <div class="modal-body">
+        <div class="row">
+            <div class="col-lg-6 col-md-12">
+                <div class="form-group c_form_group">
+                    <label>Event Title</label>
+                    <div class="form-line">
+                        <input type="text" class="form-control" placeholder="Event Title">
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-12">
+                <div class="form-group c_form_group">
+                    <label>Select event date</label>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="icon-calendar"></i></span>
+                        </div>
+                        <input data-provide="datepicker" data-date-autoclose="true" class="form-control"
+                            placeholder="Event Date" bsDatepicker>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-12 col-md-12">
+                <div class="form-group c_form_group">
+                    <label>Description</label>
+                    <div class="form-line">
+                        <textarea rows="4" class="form-control no-resize" placeholder="Event Description..."></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" (click)="modalRef.hide()">Close</button>
+        <button type="button" class="btn btn-dark">Add</button>
+    </div>
+</ng-template>

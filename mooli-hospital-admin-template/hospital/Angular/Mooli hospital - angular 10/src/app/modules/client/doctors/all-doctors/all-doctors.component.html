@@ -1,0 +1,383 @@
+<app-header></app-header>
+<div id="main-content">
+    <div class="container-fluid">
+        <!-- Page header section  -->
+        <div class="block-header">
+            <div class="row clearfix">
+                <div class="col-lg-4 col-md-12 col-sm-12">
+                    <h1>Hi, Welcomeback!</h1>
+                    <span>JustDo Doctors,</span>
+                </div>
+                <div class="col-lg-8 col-md-12 col-sm-12 text-lg-right">
+                    <div
+                        class="d-flex align-items-center justify-content-lg-end mt-4 mt-lg-0 flex-wrap vivify pullUp delay-550">
+                        <div class="border-right pr-4 mr-4 mb-2 mb-xl-0 hidden-xs">
+                            <p class="text-muted mb-1">Permanent</p>
+                            <h5 class="mb-0">214</h5>
+                        </div>
+                        <div class="border-right pr-4 mr-4 mb-2 mb-xl-0">
+                            <p class="text-muted mb-1">Contract</p>
+                            <h5 class="mb-0">206</h5>
+                        </div>
+                        <div class="border-right pr-4 mr-4 mb-2 mb-xl-0">
+                            <p class="text-muted mb-1">Total</p>
+                            <h5 class="mb-0">420</h5>
+                        </div>
+                        <div class="mb-3 mb-xl-0">
+                            <a href="#" class="btn btn-dark">Add New</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row clearfix">
+            <div class="col-12">
+                <nav class="navbar navbar-expand-lg page_menu">
+                    <a class="navbar-brand" href="#">M.</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fa fa-bars text-muted"></i>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item vivify swoopInTop delay-150 active"><a class="nav-link"
+                                    href="#">Paris</a></li>
+                            <li class="nav-item vivify swoopInTop delay-250"><a class="nav-link" href="#">Tokyo</a></li>
+                            <li class="nav-item vivify swoopInTop delay-250"><a class="nav-link" href="#">Moscow</a>
+                            </li>
+                            <li class="nav-item vivify swoopInTop delay-250"><a class="nav-link" href="#">Dubai</a></li>
+                        </ul>
+                        <div class="ml-auto">
+                            <a [routerLink]="['/todolist']" href="javascript:void(0)" class="btn btn-default">ToDo</a>
+                            <a [routerLink]="['/settings']" href="javascript:void(0)"
+                                class="btn btn-default ml-1">Settings</a>
+
+                        </div>
+                    </div>
+                </nav>
+            </div>
+            <div class="col-12">
+                <div class="card">
+                    <div class="body">
+                        <div class="row">
+                            <div class="col-xl-2 col-sm-4 mt-2">
+                                <div>Dentist</div>
+                                <div class="mt-3 h2">12</div>
+                            </div>
+                            <div class="col-xl-2 col-sm-4 mt-2">
+                                <div>Gynecologist</div>
+                                <div class="mt-3 h2">10</div>
+                            </div>
+                            <div class="col-xl-2 col-sm-4 mt-2">
+                                <div>Nursing</div>
+                                <div class="mt-3 h2">58</div>
+                            </div>
+                            <div class="col-xl-2 col-sm-4 mt-2">
+                                <div>Audiology</div>
+                                <div class="mt-3 h2">20</div>
+                            </div>
+                            <div class="col-xl-2 col-sm-4 mt-2">
+                                <div>Nursing</div>
+                                <div class="mt-3 h2">25</div>
+                            </div>
+                            <div class="col-xl-2 col-sm-4 mt-2">
+                                <div>Audiology</div>
+                                <div class="mt-3 h2">23</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row clearfix">
+            <div class="col-lg-12">
+                <div class="row clearfix">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="card">
+                            <div class="header">
+                                <ul class="header-dropdown dropdown" dropdown>
+                                    <li class="dropdown">
+                                        <a href="javascript:void(0);" id="button-basic" dropdownToggle
+                                            aria-controls="dropdown-basic" class="dropdown-toggle"
+                                            data-toggle="dropdown" role="button" aria-haspopup="true"
+                                            aria-expanded="false"></a>
+                                        <ul class="dropdown-menu theme-bg gradient  dropdown-menu-right"
+                                            id="dropdown-basic" *dropdownMenu role="menu"
+                                            aria-labelledby="button-basic">
+                                            <li><a href="javascript:void(0);">Action</a></li>
+                                            <li><a href="javascript:void(0);">Another Action</a></li>
+                                            <li><a href="javascript:void(0);">Something else</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="body text-center">
+                                <div class="circle">
+                                    <img class="rounded-circle" src="assets/images/sm/avatar1.jpg" alt="">
+                                </div>
+                                <h6 class="mt-3 mb-0">Michelle Green</h6>
+                                <span>jason-porter@info.com</span>
+                                <ul class="mt-3 list-unstyled d-flex justify-content-center">
+                                    <li><a class="p-3" target="_blank" href="#"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a class="p-3" target="_blank" href="#"><i class="fa fa-slack"></i></a></li>
+                                    <li><a class="p-3" target="_blank" href="#"><i class="fa fa-linkedin"></i></a></li>
+                                </ul>
+                                <button class="btn btn-default btn-sm">Profile</button>
+                                <button class="btn btn-default btn-sm ml-1">Message</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="card">
+                            <div class="header">
+                                <ul class="header-dropdown dropdown" dropdown>
+                                    <li class="dropdown">
+                                        <a href="javascript:void(0);" id="button-basic" dropdownToggle
+                                            aria-controls="dropdown-basic" class="dropdown-toggle"
+                                            data-toggle="dropdown" role="button" aria-haspopup="true"
+                                            aria-expanded="false"></a>
+                                        <ul class="dropdown-menu theme-bg gradient  dropdown-menu-right"
+                                            id="dropdown-basic" *dropdownMenu role="menu"
+                                            aria-labelledby="button-basic">
+                                            <li><a href="javascript:void(0);">Action</a></li>
+                                            <li><a href="javascript:void(0);">Another Action</a></li>
+                                            <li><a href="javascript:void(0);">Something else</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="body text-center">
+                                <div class="circle">
+                                    <img class="rounded-circle" src="assets/images/sm/avatar2.jpg" alt="">
+                                </div>
+                                <h6 class="mt-3 mb-0">Jason Porter</h6>
+                                <span>Carol@info.com</span>
+                                <ul class="mt-3 list-unstyled d-flex justify-content-center">
+                                    <li><a class="p-3" target="_blank" href="#"><i class="fa fa-skype"></i></a></li>
+                                    <li><a class="p-3" target="_blank" href="#"><i class="fa fa-instagram"></i></a></li>
+                                    <li><a class="p-3" target="_blank" href="#"><i class="fa fa-dribbble"></i></a></li>
+                                </ul>
+                                <button class="btn btn-default btn-sm">Profile</button>
+                                <button class="btn btn-default btn-sm ml-1">Message</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="card">
+                            <div class="header">
+                                <ul class="header-dropdown dropdown" dropdown>
+                                    <li class="dropdown">
+                                        <a href="javascript:void(0);" id="button-basic" dropdownToggle
+                                            aria-controls="dropdown-basic" class="dropdown-toggle"
+                                            data-toggle="dropdown" role="button" aria-haspopup="true"
+                                            aria-expanded="false"></a>
+                                        <ul class="dropdown-menu theme-bg gradient  dropdown-menu-right"
+                                            id="dropdown-basic" *dropdownMenu role="menu"
+                                            aria-labelledby="button-basic">
+                                            <li><a href="javascript:void(0);">Action</a></li>
+                                            <li><a href="javascript:void(0);">Another Action</a></li>
+                                            <li><a href="javascript:void(0);">Something else</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="body text-center">
+                                <div class="circle">
+                                    <img class="rounded-circle" src="assets/images/sm/avatar3.jpg" alt="">
+                                </div>
+                                <h6 class="mt-3 mb-0">David Wallace</h6>
+                                <span>Michelle@info.com</span>
+                                <ul class="mt-3 list-unstyled d-flex justify-content-center">
+                                    <li><a class="p-3" target="_blank" href="#"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a class="p-3" target="_blank" href="#"><i class="fa fa-dribbble"></i></a></li>
+                                    <li><a class="p-3" target="_blank" href="#"><i class="fa fa-slack"></i></a></li>
+                                    <li><a class="p-3" target="_blank" href="#"><i class="fa fa-linkedin"></i></a></li>
+                                </ul>
+                                <button class="btn btn-default btn-sm">Profile</button>
+                                <button class="btn btn-default btn-sm ml-1">Message</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="card">
+                            <div class="header">
+                                <ul class="header-dropdown dropdown" dropdown>
+                                    <li class="dropdown">
+                                        <a href="javascript:void(0);" id="button-basic" dropdownToggle
+                                            aria-controls="dropdown-basic" class="dropdown-toggle"
+                                            data-toggle="dropdown" role="button" aria-haspopup="true"
+                                            aria-expanded="false"></a>
+                                        <ul class="dropdown-menu theme-bg gradient  dropdown-menu-right"
+                                            id="dropdown-basic" *dropdownMenu role="menu"
+                                            aria-labelledby="button-basic">
+                                            <li><a href="javascript:void(0);">Action</a></li>
+                                            <li><a href="javascript:void(0);">Another Action</a></li>
+                                            <li><a href="javascript:void(0);">Something else</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="body text-center">
+                                <div class="circle">
+                                    <img class="rounded-circle" src="assets/images/sm/avatar4.jpg" alt="">
+                                </div>
+                                <h6 class="mt-3 mb-0">Michelle Green</h6>
+                                <span>jason-porter@info.com</span>
+                                <ul class="mt-3 list-unstyled d-flex justify-content-center">
+                                    <li><a class="p-3" target="_blank" href="#"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a class="p-3" target="_blank" href="#"><i class="fa fa-slack"></i></a></li>
+                                    <li><a class="p-3" target="_blank" href="#"><i class="fa fa-linkedin"></i></a></li>
+                                </ul>
+                                <button class="btn btn-default btn-sm">Profile</button>
+                                <button class="btn btn-default btn-sm ml-1">Message</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="card">
+                            <div class="header">
+                                <ul class="header-dropdown dropdown" dropdown>
+                                    <li class="dropdown">
+                                        <a href="javascript:void(0);" id="button-basic" dropdownToggle
+                                            aria-controls="dropdown-basic" class="dropdown-toggle"
+                                            data-toggle="dropdown" role="button" aria-haspopup="true"
+                                            aria-expanded="false"></a>
+                                        <ul class="dropdown-menu theme-bg gradient  dropdown-menu-right"
+                                            id="dropdown-basic" *dropdownMenu role="menu"
+                                            aria-labelledby="button-basic">
+                                            <li><a href="javascript:void(0);">Action</a></li>
+                                            <li><a href="javascript:void(0);">Another Action</a></li>
+                                            <li><a href="javascript:void(0);">Something else</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="body text-center">
+                                <div class="circle">
+                                    <img class="rounded-circle" src="assets/images/sm/avatar5.jpg" alt="">
+                                </div>
+                                <h6 class="mt-3 mb-0">Michelle Green</h6>
+                                <span>jason-porter@info.com</span>
+                                <ul class="mt-3 list-unstyled d-flex justify-content-center">
+                                    <li><a class="p-3" target="_blank" href="#"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a class="p-3" target="_blank" href="#"><i class="fa fa-slack"></i></a></li>
+                                    <li><a class="p-3" target="_blank" href="#"><i class="fa fa-linkedin"></i></a></li>
+                                </ul>
+                                <button class="btn btn-default btn-sm">Profile</button>
+                                <button class="btn btn-default btn-sm ml-1">Message</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="card">
+                            <div class="header">
+                                <ul class="header-dropdown dropdown" dropdown>
+                                    <li class="dropdown">
+                                        <a href="javascript:void(0);" id="button-basic" dropdownToggle
+                                            aria-controls="dropdown-basic" class="dropdown-toggle"
+                                            data-toggle="dropdown" role="button" aria-haspopup="true"
+                                            aria-expanded="false"></a>
+                                        <ul class="dropdown-menu theme-bg gradient  dropdown-menu-right"
+                                            id="dropdown-basic" *dropdownMenu role="menu"
+                                            aria-labelledby="button-basic">
+                                            <li><a href="javascript:void(0);">Action</a></li>
+                                            <li><a href="javascript:void(0);">Another Action</a></li>
+                                            <li><a href="javascript:void(0);">Something else</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="body text-center">
+                                <div class="circle">
+                                    <img class="rounded-circle" src="assets/images/sm/avatar6.jpg" alt="">
+                                </div>
+                                <h6 class="mt-3 mb-0">Michelle Green</h6>
+                                <span>jason-porter@info.com</span>
+                                <ul class="mt-3 list-unstyled d-flex justify-content-center">
+                                    <li><a class="p-3" target="_blank" href="#"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a class="p-3" target="_blank" href="#"><i class="fa fa-pinterest"></i></a></li>
+                                    <li><a class="p-3" target="_blank" href="#"><i class="fa fa-linkedin"></i></a></li>
+                                </ul>
+                                <button class="btn btn-default btn-sm">Profile</button>
+                                <button class="btn btn-default btn-sm ml-1">Message</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="card">
+                            <div class="header">
+                                <ul class="header-dropdown dropdown" dropdown>
+                                    <li class="dropdown">
+                                        <a href="javascript:void(0);" id="button-basic" dropdownToggle
+                                            aria-controls="dropdown-basic" class="dropdown-toggle"
+                                            data-toggle="dropdown" role="button" aria-haspopup="true"
+                                            aria-expanded="false"></a>
+                                        <ul class="dropdown-menu theme-bg gradient  dropdown-menu-right"
+                                            id="dropdown-basic" *dropdownMenu role="menu"
+                                            aria-labelledby="button-basic">
+                                            <li><a href="javascript:void(0);">Action</a></li>
+                                            <li><a href="javascript:void(0);">Another Action</a></li>
+                                            <li><a href="javascript:void(0);">Something else</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="body text-center">
+                                <div class="circle">
+                                    <img class="rounded-circle" src="assets/images/sm/avatar1.jpg" alt="">
+                                </div>
+                                <h6 class="mt-3 mb-0">Sean Black</h6>
+                                <span>jason-porter@info.com</span>
+                                <ul class="mt-3 list-unstyled d-flex justify-content-center">
+                                    <li><a class="p-3" target="_blank" href="#"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a class="p-3" target="_blank" href="#"><i class="fa fa-slack"></i></a></li>
+                                    <li><a class="p-3" target="_blank" href="#"><i class="fa fa-linkedin"></i></a></li>
+                                </ul>
+                                <button class="btn btn-default btn-sm">Profile</button>
+                                <button class="btn btn-default btn-sm ml-1">Message</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="card">
+                            <div class="header">
+                                <ul class="header-dropdown dropdown" dropdown>
+                                    <li class="dropdown">
+                                        <a href="javascript:void(0);" id="button-basic" dropdownToggle
+                                            aria-controls="dropdown-basic" class="dropdown-toggle"
+                                            data-toggle="dropdown" role="button" aria-haspopup="true"
+                                            aria-expanded="false"></a>
+                                        <ul class="dropdown-menu theme-bg gradient  dropdown-menu-right"
+                                            id="dropdown-basic" *dropdownMenu role="menu"
+                                            aria-labelledby="button-basic">
+                                            <li><a href="javascript:void(0);">Action</a></li>
+                                            <li><a href="javascript:void(0);">Another Action</a></li>
+                                            <li><a href="javascript:void(0);">Something else</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="body text-center">
+                                <div class="circle">
+                                    <img class="rounded-circle" src="assets/images/sm/avatar2.jpg" alt="">
+                                </div>
+                                <h6 class="mt-3 mb-0">David Wallace</h6>
+                                <span>jason-porter@info.com</span>
+                                <ul class="mt-3 list-unstyled d-flex justify-content-center">
+                                    <li><a class="p-3" target="_blank" href="#"><i class="fa fa-flickr"></i></a></li>
+                                    <li><a class="p-3" target="_blank" href="#"><i class="fa fa-dropbox"></i></a></li>
+                                    <li><a class="p-3" target="_blank" href="#"><i class="fa fa-apple"></i></a></li>
+                                    <li><a class="p-3" target="_blank" href="#"><i class="fa fa-pinterest"></i></a></li>
+                                </ul>
+                                <button class="btn btn-default btn-sm">Profile</button>
+                                <button class="btn btn-default btn-sm ml-1">Message</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

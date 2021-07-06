@@ -1,0 +1,807 @@
+<app-header></app-header>
+
+<div id="main-content">
+    <div class="container-fluid">
+        <!-- Page header section  -->
+        <div class="block-header">
+            <div class="row clearfix">
+                <div class="col-lg-4 col-md-12 col-sm-12">
+                    <h1>Hi, Welcomeback!</h1>
+                    <span>JustDo Dashboard,</span>
+                </div>
+                <div class="col-lg-8 col-md-12 col-sm-12 text-lg-right">
+                    <div
+                        class="d-flex align-items-center justify-content-lg-end mt-4 mt-lg-0 flex-wrap vivify pullUp delay-550">
+                        <div class="border-right pr-4 mr-4 mb-2 mb-xl-0 hidden-xs">
+                            <p class="text-muted mb-1">Operation <span id="mini-bar-chart3"
+                                    class="mini-bar-chart"></span></p>
+                            <h5 class="mb-0">29</h5>
+                        </div>
+                        <div class="border-right pr-4 mr-4 mb-2 mb-xl-0">
+                            <p class="text-muted mb-1">Earning <span id="mini-bar-chart2" class="mini-bar-chart"></span>
+                            </p>
+                            <h5 class="mb-0">$981</h5>
+                        </div>
+                        <div class="mb-3 mb-xl-0">
+                            <p class="text-muted mb-1">Revenue <span id="mini-bar-chart1" class="mini-bar-chart"></span>
+                            </p>
+                            <h5 class="mb-0">$56 M</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row clearfix">
+            <div class="col-12">
+                <nav class="navbar navbar-expand-lg page_menu">
+                    <a class="navbar-brand" href="#">M.</a>
+                    <button class="navbar-toggler" (click)="dashboardMenu()" type="button" data-toggle="collapse"
+                        data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <i class="fa fa-bars text-muted"></i>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item active"><a class="nav-link" [routerLink]="['/dashboard']"
+                                    href="javascript:void(0)">Analytics</a></li>
+                            <li class="nav-item"><a class="nav-link" [routerLink]="['/covid-19']"
+                                    href="javascript:void(0)">Covid 19 Dashboard</a></li>
+                        </ul>
+                        <div class="ml-auto">
+                            <a [routerLink]="['/todolist']" href="javascript:void(0)"
+                                class="btn btn-default mr-2">ToDo</a>
+                            <a [routerLink]="['/settings']" href="javascript:void(0)"
+                                class="btn btn-default">Settings</a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+            <div class="col-12">
+                <div class="card theme-bg gradient">
+                    <div class="body">
+                        <div class="row">
+                            <div class="col-lg-3 col-md-6">
+                                <div class="card">
+                                    <div class="body">
+                                        <div>Total Doctors</div>
+                                        <div class="mt-3 h1">1,035</div>
+                                        <div class="d-flex">
+                                            <div class="mr-3">1.78% <i class="fa fa-caret-down"></i></div>
+                                            <span>Last year</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6">
+                                <div class="card">
+                                    <div class="body">
+                                        <div>Total Pharmacists</div>
+                                        <div class="mt-3 h1">735</div>
+                                        <div class="d-flex">
+                                            <div class="mr-3">6.78% <i class="fa fa-caret-down"></i></div>
+                                            <span>Last year</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6">
+                                <div class="card">
+                                    <div class="body">
+                                        <div>Total Nurses</div>
+                                        <div class="mt-3 h1">2,652</div>
+                                        <div class="d-flex">
+                                            <div class="mr-3">13.78% <i class="fa fa-caret-down"></i></div>
+                                            <span>Last year</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6">
+                                <div class="card">
+                                    <div class="body">
+                                        <div>Total Patients</div>
+                                        <div class="mt-3 h1">1,671</div>
+                                        <div class="d-flex">
+                                            <div class="mr-3">5.78% <i class="fa fa-caret-down"></i></div>
+                                            <span>Last year</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row clearfix">
+            <div class="col-12">
+                <div class="section_title">
+                    <div class="mr-3">
+                        <h3>Overview</h3>
+                        <small>Statistics, Predictive Analytics Data Visualization, Big Data Analytics, etc.</small>
+                    </div>
+                    <div>
+                        <div class="btn-group mb-3">
+                            <div class="btn-group" role="group" dropdown>
+                                <button id="btnGroupDrop1" type="button" class="btn btn-default dropdown-toggle"
+                                    data-toggle="dropdown" id="button-basic" dropdownToggle
+                                    aria-controls="dropdown-basic">14 March 2020</button>
+                                <div id="dropdown-basic" *dropdownMenu class="dropdown-menu" role="menu"
+                                    aria-labelledby="button-basic">
+                                    <a class="dropdown-item" href="javascript:void(0);">Today’s</a>
+                                    <a class="dropdown-item" href="javascript:void(0);">This Week</a>
+                                    <a class="dropdown-item" href="javascript:void(0);">Last Week</a>
+                                    <a class="dropdown-item" href="javascript:void(0);">This Month</a>
+                                    <a class="dropdown-item" href="javascript:void(0);">Last Month</a>
+                                    <a class="dropdown-item" href="javascript:void(0);">Last 12 Month</a>
+                                    <a class="dropdown-item" href="javascript:void(0);">Custom Dates</a>
+                                </div>
+                            </div>
+                            <button type="button" class="btn btn-default"><i class="fa fa-send"></i> <span
+                                    class="hidden-md"> Report</span></button>
+                            <button type="button" class="btn btn-default"><i class="fa fa-file-pdf-o"></i> <span
+                                    class="hidden-md"> Export</span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row clearfix row-deck">
+            <div class="col-lg-8 col-md-12">
+                <div class="card" [ngClass]="{'fullscreen': isFull}">
+                    <div class="header">
+                        <h2>This Year's Hospital Revenue</h2>
+                        <small class="text-muted font-12">It is the period time a user is actively engaged with your
+                            website, page or app, etc</small>
+                        <ul class="header-dropdown dropdown">
+                            <li><a href="javascript:void(0);" (click)="fullScreenSection(1)" class="full-screen"><i
+                                        class="fa fa-expand"></i></a></li>
+                            <li class="dropdown" dropdown>
+                                <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown"
+                                    role="button" aria-haspopup="true" aria-expanded="false" id="button-basic"
+                                    dropdownToggle aria-controls="dropdown-basic"></a>
+                                <ul class="dropdown-menu theme-bg gradient dropdown-menu-right" id="dropdown-basic"
+                                    *dropdownMenu role="menu" aria-labelledby="button-basic">
+                                    <li><a href="javascript:void(0);"><i class="dropdown-icon fa fa-eye"></i> View
+                                            Details</a></li>
+                                    <li><a href="javascript:void(0);"><i class="dropdown-icon fa fa-share-alt"></i>
+                                            Share</a></li>
+                                    <li><a href="javascript:void(0);"><i class="dropdown-icon fa fa-copy"></i> Copy
+                                            to</a></li>
+                                    <li><a href="javascript:void(0);"><i class="dropdown-icon fa fa-folder"></i> Move
+                                            to</a></li>
+                                    <li><a href="javascript:void(0);"><i class="dropdown-icon fa fa-edit"></i>
+                                            Rename</a></li>
+                                    <li><a href="javascript:void(0);"><i class="dropdown-icon fa fa-trash"></i>
+                                            Delete</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="body">
+                        <div class="d-flex flex-row">
+                            <div class="pb-3">
+                                <h5 class="mb-0">$1,056</h5>
+                                <small class="text-muted font-11">Expenses</small>
+                            </div>
+                            <div class="pb-3 pl-4 pr-4">
+                                <h5 class="mb-0">$3,098</h5>
+                                <small class="text-muted font-11">Total Profit</small>
+                            </div>
+                            <div class="ml-auto">
+                                <div class="btn-group btn-group-sm">
+                                    <button type="button" class="btn btn-sm btn-default">Day</button>
+                                    <button type="button" class="btn btn-sm btn-default">Week</button>
+                                    <button type="button"
+                                        class="btn btn-sm btn-primary theme-bg gradient">Month</button>
+                                </div>
+                            </div>
+                        </div>
+                        <app-line-chart class="flot-chart"></app-line-chart>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-12">
+                <div class="card">
+                    <div class="header">
+                        <h2>List By Country</h2>
+                        <small class="font-12">The total number of Page Impressions within the date range</small>
+                    </div>
+                    <div class="body">
+                        <div class="d-flex flex-row">
+                            <div class="pb-3">
+                                <h5 class="mb-0">2,356</h5>
+                                <small class="text-muted font-11">New Patients</small>
+                            </div>
+                            <div class="pb-3 pl-4 pr-4">
+                                <h5 class="mb-0">1,898</h5>
+                                <small class="text-muted font-11">Old Patients</small>
+                            </div>
+                            <div class="ml-auto">
+                                <div class="btn-group btn-group-sm">
+                                    <button type="button" class="btn btn-sm btn-default">W</button>
+                                    <button type="button" class="btn btn-sm btn-default">M</button>
+                                    <button type="button" class="btn btn-sm btn-primary theme-bg gradient">Y</button>
+                                </div>
+                            </div>
+                        </div>
+                        <app-bar-chart></app-bar-chart>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row clearfix row-deck">
+            <div class="col-lg-4 col-md-12">
+                <div class="card" [ngClass]="{'fullscreen': isFull1}">
+                    <div class="header">
+                        <h2>Doctors Availability</h2>
+                        <ul class="header-dropdown dropdown">
+                            <li><a href="javascript:void(0);" (click)="fullScreenSection(2)" class="full-screen"><i
+                                        class="fa fa-expand"></i></a></li>
+                            <li class="dropdown" dropdown>
+                                <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown"
+                                    role="button" aria-haspopup="true" aria-expanded="false" id="button-basic"
+                                    dropdownToggle aria-controls="dropdown-basic"></a>
+                                <ul class="dropdown-menu theme-bg gradient dropdown-menu-right" id="dropdown-basic"
+                                    *dropdownMenu role="menu" aria-labelledby="button-basic">
+                                    <li><a href="javascript:void(0);"><i class="dropdown-icon fa fa-eye"></i> View
+                                            Details</a></li>
+                                    <li><a href="javascript:void(0);"><i class="dropdown-icon fa fa-share-alt"></i>
+                                            Share</a></li>
+                                    <li><a href="javascript:void(0);"><i class="dropdown-icon fa fa-copy"></i> Copy
+                                            to</a></li>
+                                    <li><a href="javascript:void(0);"><i class="dropdown-icon fa fa-folder"></i> Move
+                                            to</a></li>
+                                    <li><a href="javascript:void(0);"><i class="dropdown-icon fa fa-edit"></i>
+                                            Rename</a></li>
+                                    <li><a href="javascript:void(0);"><i class="dropdown-icon fa fa-trash"></i>
+                                            Delete</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="body table-responsive">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Doctor</th>
+                                    <th>Speciality</th>
+                                    <th>Availability</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Michelle</td>
+                                    <td>Dental</td>
+                                    <td>
+                                        <span class="badge badge-success">Available</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Jason</td>
+                                    <td>Ortho</td>
+                                    <td>
+                                        <span class="badge badge-warning">On Leave</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>David</td>
+                                    <td>Skin</td>
+                                    <td>
+                                        <span class="badge badge-danger">Not Available</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Angelica </td>
+                                    <td>Dental</td>
+                                    <td>
+                                        <span class="badge badge-success">Available</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Michelle</td>
+                                    <td>Dental</td>
+                                    <td>
+                                        <span class="badge badge-success">Available</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Jason</td>
+                                    <td>Ortho</td>
+                                    <td>
+                                        <span class="badge badge-warning">On Leave</span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <a href="#" target="_blank" class="btn btn-secondary btn-block">View all</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-12">
+                <div class="card">
+                    <div class="header">
+                        <h2>Appointments Status</h2>
+                    </div>
+                    <div class="body">
+                        <app-pie-chart></app-pie-chart>
+                        <div class="mt-2">
+                            <div class="form-group">
+                                <label class="d-block">Cancelled <span class="float-right">2,098</span></label>
+                                <div class="progress progress-xs">
+                                    <div class="progress-bar" role="progressbar" aria-valuenow="77" aria-valuemin="0"
+                                        aria-valuemax="100" style="width: 77%; background-color: #2c83b6;"></div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="d-block">Completed <span class="float-right">1,002</span></label>
+                                <div class="progress progress-xs">
+                                    <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0"
+                                        aria-valuemax="100" style="width: 50%; background-color: #a5d8a2;"></div>
+                                </div>
+                            </div>
+                            <div class="form-group mb-0">
+                                <label class="d-block">Pending <span class="float-right">780</span></label>
+                                <div class="progress progress-xs">
+                                    <div class="progress-bar" role="progressbar" aria-valuenow="23" aria-valuemin="0"
+                                        aria-valuemax="100" style="width: 23%; background-color: #9367b4;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-12">
+                <div class="card" [ngClass]="{'fullscreen': isFull3}">
+                    <div class="header">
+                        <h2>Death & Recovery rate</h2>
+                        <ul class="header-dropdown dropdown">
+                            <li><a href="javascript:void(0);" (click)="fullScreenSection(3)" class="full-screen"><i
+                                        class="fa fa-expand"></i></a></li>
+                            <li class="dropdown" dropdown>
+                                <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown"
+                                    role="button" aria-haspopup="true" aria-expanded="false" id="button-basic"
+                                    dropdownToggle aria-controls="dropdown-basic"></a>
+                                <ul class="dropdown-menu theme-bg gradient dropdown-menu-right" id="dropdown-basic"
+                                    *dropdownMenu role="menu" aria-labelledby="button-basic">
+                                    <li><a href="javascript:void(0);"><i class="dropdown-icon fa fa-eye"></i> View
+                                            Details</a></li>
+                                    <li><a href="javascript:void(0);"><i class="dropdown-icon fa fa-share-alt"></i>
+                                            Share</a></li>
+                                    <li><a href="javascript:void(0);"><i class="dropdown-icon fa fa-copy"></i> Copy
+                                            to</a></li>
+                                    <li><a href="javascript:void(0);"><i class="dropdown-icon fa fa-folder"></i> Move
+                                            to</a></li>
+                                    <li><a href="javascript:void(0);"><i class="dropdown-icon fa fa-edit"></i>
+                                            Rename</a></li>
+                                    <li><a href="javascript:void(0);"><i class="dropdown-icon fa fa-trash"></i>
+                                            Delete</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="body">
+                        <div class="d-flex flex-row">
+                            <div class="pb-3">
+                                <h5 class="mb-0">356</h5>
+                                <small class="text-muted font-11">Death</small>
+                            </div>
+                            <div class="pb-3 pl-4 pr-4">
+                                <h5 class="mb-0">698</h5>
+                                <small class="text-muted font-11">Recovery</small>
+                            </div>
+                            <div class="ml-auto">
+                                <div class="btn-group btn-group-sm">
+                                    <button type="button" class="btn btn-sm btn-default">D</button>
+                                    <button type="button" class="btn btn-sm btn-primary theme-bg gradient">W</button>
+                                    <button type="button" class="btn btn-sm btn-default">M</button>
+                                </div>
+                            </div>
+                        </div>
+                        <app-column-chart></app-column-chart>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row clearfix row-deck">
+            <div class="col-lg-5 col-md-12">
+                <div class="card" [ngClass]="{'fullscreen': isFull4}">
+                    <div class="header">
+                        <h2>Organic Visits & Conversions</h2>
+                        <ul class="header-dropdown dropdown">
+                            <li><a href="javascript:void(0);" (click)="fullScreenSection(4)" class="full-screen"><i
+                                        class="fa fa-expand"></i></a></li>
+                            <li class="dropdown" dropdown>
+                                <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown"
+                                    role="button" aria-haspopup="true" aria-expanded="false" id="button-basic"
+                                    dropdownToggle aria-controls="dropdown-basic"></a>
+                                <ul class="dropdown-menu theme-bg gradient dropdown-menu-right" id="dropdown-basic"
+                                    *dropdownMenu role="menu" aria-labelledby="button-basic">
+                                    <li><a href="javascript:void(0);"><i class="dropdown-icon fa fa-eye"></i> View
+                                            Details</a></li>
+                                    <li><a href="javascript:void(0);"><i class="dropdown-icon fa fa-share-alt"></i>
+                                            Share</a></li>
+                                    <li><a href="javascript:void(0);"><i class="dropdown-icon fa fa-copy"></i> Copy
+                                            to</a></li>
+                                    <li><a href="javascript:void(0);"><i class="dropdown-icon fa fa-folder"></i> Move
+                                            to</a></li>
+                                    <li><a href="javascript:void(0);"><i class="dropdown-icon fa fa-edit"></i>
+                                            Rename</a></li>
+                                    <li><a href="javascript:void(0);"><i class="dropdown-icon fa fa-trash"></i>
+                                            Delete</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="body">
+                        <div class="d-flex flex-row">
+                            <div class="pb-3">
+                                <h5 class="mb-0">$356</h5>
+                                <small class="text-muted font-11">Rate</small>
+                            </div>
+                            <div class="pb-3 pl-4 pr-4">
+                                <h5 class="mb-0">$198</h5>
+                                <small class="text-muted font-11">Value</small>
+                            </div>
+                            <div class="ml-auto">
+                                <div class="btn-group btn-group-sm">
+                                    <button type="button" class="btn btn-sm btn-default">Day</button>
+                                    <button type="button" class="btn btn-sm btn-default">Week</button>
+                                    <button type="button"
+                                        class="btn btn-sm btn-primary theme-bg gradient">Month</button>
+                                </div>
+                            </div>
+                        </div>
+                        <img src="assets/images/map.png" style="width: 100%;height: 210px;">
+                        <!-- <app-worldmap></app-worldmap> -->
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="card">
+                    <div class="header">
+                        <h2>Overall Hospital Rating</h2>
+                    </div>
+                    <div class="body">
+                        <div class="d-flex align-items-end">
+                            <h2 class="mb-0">4.3</h2>
+                            <div class="ml-2 mr-2">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star-o"></i>
+                            </div>
+                        </div>
+                        <div class="avatar-list avatar-list-stacked mt-3">
+                            <img class="avatar avatar sm" src="assets/images/xs/avatar5.jpg" data-toggle="tooltip"
+                                title="" tooltip="Avatar" data-original-title="Avatar">
+                            <img class="avatar avatar sm" src="assets/images/xs/avatar6.jpg" data-toggle="tooltip"
+                                title="" tooltip="Avatar" data-original-title="Avatar">
+                            <img class="avatar avatar sm" src="assets/images/xs/avatar1.jpg" data-toggle="tooltip"
+                                title="" tooltip="Avatar" data-original-title="Avatar">
+                            <img class="avatar avatar sm" src="assets/images/xs/avatar4.jpg" data-toggle="tooltip"
+                                title="" tooltip="Avatar" data-original-title="Avatar">
+                        </div>
+                        <ul class="list-group list-group-flush ratings font-13 mt-3">
+                            <li class="list-group-item">
+                                <div>5.0</div>
+                                <div class="stars ml-2 mr-2">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                </div>
+                                <div class="ml-auto">
+                                    <span>4,178</span>
+                                    <span class="font-10">58%</span>
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                <div>4.0</div>
+                                <div class="stars ml-2 mr-2">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star-o"></i>
+                                </div>
+                                <div class="ml-auto">
+                                    <span>2,091</span>
+                                    <span class="font-10">28%</span>
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                <div>3.0</div>
+                                <div class="stars ml-2 mr-2">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star-o"></i>
+                                    <i class="fa fa-star-o"></i>
+                                </div>
+                                <div class="ml-auto">
+                                    <span>984</span>
+                                    <span class="font-10">15%</span>
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                <div>2.0</div>
+                                <div class="stars ml-2 mr-2">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star-o"></i>
+                                    <i class="fa fa-star-o"></i>
+                                    <i class="fa fa-star-o"></i>
+                                </div>
+                                <div class="ml-auto">
+                                    <span>430</span>
+                                    <span class="font-10">8%</span>
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                <div>1.0</div>
+                                <div class="stars ml-2 mr-2">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star-o"></i>
+                                    <i class="fa fa-star-o"></i>
+                                    <i class="fa fa-star-o"></i>
+                                    <i class="fa fa-star-o"></i>
+                                </div>
+                                <div class="ml-auto">
+                                    <span>307</span>
+                                    <span class="font-10">18%</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="card">
+                    <div class="header">
+                        <h2>Users Overview</h2>
+                    </div>
+                    <div class="body">
+                        <div class="row">
+                            <div class="col-6 border-right">
+                                <label class="mb-0 font-13">New Patient</label>
+                                <h4 class="font-22 font-weight-bold">2,025</h4>
+                            </div>
+                            <div class="col-6">
+                                <label class="mb-0 font-13">Return Patient</label>
+                                <h4 class="font-22 font-weight-bold">1,254</h4>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="form-group">
+                            <label class="d-block">New Patient <span class="float-right">77%</span></label>
+                            <div class="progress progress-xxs">
+                                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="77"
+                                    aria-valuemin="0" aria-valuemax="100" style="width: 77%;"></div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="d-block">Return Patients <span class="float-right">50%</span></label>
+                            <div class="progress progress-xxs">
+                                <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="50"
+                                    aria-valuemin="0" aria-valuemax="100" style="width: 50%;"></div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="d-block">Engagement <span class="float-right">23%</span></label>
+                            <div class="progress progress-xxs">
+                                <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="23"
+                                    aria-valuemin="0" aria-valuemax="100" style="width: 23%;"></div>
+                            </div>
+                        </div>
+                        <small class="font-12">The total number of Page Impressions within the date range<a href="">View
+                                more</a></small>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row clearfix">
+            <div class="col-12">
+                <div class="section_title">
+                    <div class="mr-3">
+                        <h3>Upcoming Operations List</h3>
+                        <small>Statistics, Predictive Analytics Data Visualization, Big Data Analytics, etc.</small>
+                    </div>
+                    <div>
+                        <div class="btn-group mb-3">
+                            <div class="btn-group" role="group" dropdown>
+                                <button id="btnGroupDrop1" type="button" class="btn btn-default dropdown-toggle"
+                                    data-toggle="dropdown" id="button-basic" dropdownToggle
+                                    aria-controls="dropdown-basic">20 Aug 2020</button>
+                                <div id="dropdown-basic" *dropdownMenu class="dropdown-menu" role="menu"
+                                    aria-labelledby="button-basic">
+                                    <a class="dropdown-item" href="javascript:void(0);">Today’s</a>
+                                    <a class="dropdown-item" href="javascript:void(0);">This Week</a>
+                                    <a class="dropdown-item" href="javascript:void(0);">Last Week</a>
+                                    <a class="dropdown-item" href="javascript:void(0);">This Month</a>
+                                    <a class="dropdown-item" href="javascript:void(0);">Last Month</a>
+                                    <a class="dropdown-item" href="javascript:void(0);">Last 12 Month</a>
+                                    <a class="dropdown-item" href="javascript:void(0);">Custom Dates</a>
+                                </div>
+                            </div>
+                            <button type="button" class="btn btn-default"><i class="fa fa-send"></i> <span
+                                    class="hidden-md"> Report</span></button>
+                            <button type="button" class="btn btn-default"><i class="fa fa-file-pdf-o"></i> <span
+                                    class="hidden-md"> Export</span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="card">
+                    <div class="body">
+                        <div class="table-responsive">
+                            <table class="table mb-0 table-borderless table-hover">
+                                <thead>
+                                    <tr>
+                                        <th><strong>#</strong></th>
+                                        <th><strong>Patient Name</strong></th>
+                                        <th><strong>Doctors Team</strong></th>
+                                        <th><strong>Date Of Operation</strong></th>
+                                        <th><strong>Report</strong></th>
+                                        <th><strong>Diseases</strong></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>B-865</td>
+                                        <td>
+                                            <div class="media mb-0">
+                                                <img src="assets/images/xs/avatar1.jpg" data-toggle="tooltip"
+                                                    data-placement="top" title="" alt="Avatar"
+                                                    class="rounded-circle w35" tooltip="Avatar Name"
+                                                    data-original-title="Avatar Name">
+                                                <div class="media-body ml-3">
+                                                    <h6 class="m-0">Michelle Schultz</h6>
+                                                    <span class="text-muted font-12">+ 264-625-5858</span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="avatar-list avatar-list-stacked">
+                                                <img class="avatar avatar sm" src="assets/images/xs/avatar5.jpg"
+                                                    data-toggle="tooltip" tooltip="Avatar" title=""
+                                                    data-original-title="Avatar">
+                                                <img class="avatar avatar sm" src="assets/images/xs/avatar6.jpg"
+                                                    data-toggle="tooltip" tooltip="Avatar" title=""
+                                                    data-original-title="Avatar">
+                                                <img class="avatar avatar sm" tooltip="Avatar"
+                                                    src="assets/images/xs/avatar4.jpg" data-toggle="tooltip" title=""
+                                                    data-original-title="Avatar">
+                                            </div>
+                                        </td>
+                                        <td>15-08-2020</td>
+                                        <td><a href="#"><i class="fa fa-file-pdf-o text-danger font-16"></i></a>
+                                        </td>
+                                        <td>Fracture</td>
+                                    </tr>
+                                    <tr>
+                                        <td>B-231</td>
+                                        <td>
+                                            <div class="media mb-0">
+                                                <img src="assets/images/xs/avatar2.jpg" data-toggle="tooltip"
+                                                    data-placement="top" title="" alt="Avatar"
+                                                    class="rounded-circle w35" tooltip="Avatar Name"
+                                                    data-original-title="Avatar Name">
+                                                <div class="media-body ml-3">
+                                                    <h6 class="m-0">Deborah Cox</h6>
+                                                    <span class="text-muted font-12">+ 264-625-1818</span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="avatar-list avatar-list-stacked">
+                                                <img class="avatar avatar sm" src="assets/images/xs/avatar8.jpg"
+                                                    data-toggle="tooltip" tooltip="Avatar" title=""
+                                                    data-original-title="Avatar">
+                                                <img class="avatar avatar sm" src="assets/images/xs/avatar1.jpg"
+                                                    data-toggle="tooltip" tooltip="Avatar" title=""
+                                                    data-original-title="Avatar">
+                                            </div>
+                                        </td>
+                                        <td>15-08-2020</td>
+                                        <td><a href="#"><i class="fa fa-file-pdf-o text-danger font-16"></i></a>
+                                        </td>
+                                        <td>Cataract surgery</td>
+                                    </tr>
+                                    <tr>
+                                        <td>B-781</td>
+                                        <td>
+                                            <div class="media mb-0">
+                                                <img src="assets/images/xs/avatar3.jpg" data-toggle="tooltip"
+                                                    data-placement="top" title="" alt="Avatar"
+                                                    class="rounded-circle w35" tooltip="Avatar Name"
+                                                    data-original-title="Avatar Name">
+                                                <div class="media-body ml-3">
+                                                    <h6 class="m-0">Denise Elliott</h6>
+                                                    <span class="text-muted font-12">+ 264-625-2323</span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="avatar-list avatar-list-stacked">
+                                                <img class="avatar avatar sm" src="assets/images/xs/avatar9.jpg"
+                                                    data-toggle="tooltip" tooltip="Avatar" title=""
+                                                    data-original-title="Avatar">
+                                            </div>
+                                        </td>
+                                        <td>15-08-2020</td>
+                                        <td><a href="#"><i class="fa fa-file-pdf-o text-danger font-16"></i></a>
+                                        </td>
+                                        <td>Hysterectomy</td>
+                                    </tr>
+                                    <tr>
+                                        <td>B-454</td>
+                                        <td>
+                                            <div class="media mb-0">
+                                                <img src="assets/images/xs/avatar4.jpg" data-toggle="tooltip"
+                                                    data-placement="top" tooltip="Avatar Name" title="" alt="Avatar"
+                                                    class="rounded-circle w35" data-original-title="Avatar Name">
+                                                <div class="media-body ml-3">
+                                                    <h6 class="m-0">Rose Coke</h6>
+                                                    <span class="text-muted font-12">+ 264-625-8743</span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="avatar-list avatar-list-stacked">
+                                                <img class="avatar avatar sm" src="assets/images/xs/avatar8.jpg"
+                                                    data-toggle="tooltip" tooltip="Avatar" title=""
+                                                    data-original-title="Avatar">
+                                                <img class="avatar avatar sm" src="assets/images/xs/avatar1.jpg"
+                                                    data-toggle="tooltip" tooltip="Avatar" title=""
+                                                    data-original-title="Avatar">
+                                                <img class="avatar avatar sm" src="assets/images/xs/avatar6.jpg"
+                                                    data-toggle="tooltip" tooltip="Avatar" title=""
+                                                    data-original-title="Avatar">
+                                            </div>
+                                        </td>
+                                        <td>15-08-2020</td>
+                                        <td><a href="#"><i class="fa fa-file-pdf-o text-danger font-16"></i></a>
+                                        </td>
+                                        <td>Cancer</td>
+                                    </tr>
+                                    <tr>
+                                        <td>B-988</td>
+                                        <td>
+                                            <div class="media mb-0">
+                                                <img src="assets/images/xs/avatar5.jpg" data-toggle="tooltip"
+                                                    data-placement="top" tooltip="Avatar Name" title="" alt="Avatar"
+                                                    class="rounded-circle w35" data-original-title="Avatar Name">
+                                                <div class="media-body ml-3">
+                                                    <h6 class="m-0">Terry Carter</h6>
+                                                    <span class="text-muted font-12">+ 264-625-1234</span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="avatar-list avatar-list-stacked">
+                                                <img class="avatar avatar sm" src="assets/images/xs/avatar8.jpg"
+                                                    data-toggle="tooltip" tooltip="Avatar" title=""
+                                                    data-original-title="Avatar">
+                                                <img class="avatar avatar sm" src="assets/images/xs/avatar1.jpg"
+                                                    data-toggle="tooltip" tooltip="Avatar" title=""
+                                                    data-original-title="Avatar">
+                                            </div>
+                                        </td>
+                                        <td>15-08-2020</td>
+                                        <td><a href="#"><i class="fa fa-file-pdf-o text-danger font-16"></i></a>
+                                        </td>
+                                        <td>Cataract surgery</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

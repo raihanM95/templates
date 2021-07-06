@@ -1,0 +1,75 @@
+.footer {
+	color: $footer-color;
+	background: $dark;
+
+	address{
+		position: relative;
+		z-index: 2;
+		color: $light;
+	}
+
+	p {
+		margin-bottom: 0.25rem;
+	}
+	
+	.footer-link {
+		color: $footer-color;
+	}
+
+	.footer-top {
+		padding: 74px 0;
+
+		.footer-title {
+			font-size: 1.2rem;
+			margin-bottom: .875rem;
+		}
+
+		.social-icons {
+			margin-top: 1.25rem;
+			a {
+				i {
+					font-size: 1.5rem;
+					color: $light;
+					margin-right: 1rem;
+					-webkit-transition: all 0.3s;
+					-moz-transition: all 0.3s;
+					-ms-transition: all 0.3s;
+					-o-transition: all 0.3s;
+					transition: all 0.3s;
+				}
+				&:hover {
+					i {
+						color: $white;
+					}
+				}
+			}
+		}
+	}
+
+	.footer-bottom {
+		background: $footer-bottom-bg;
+		padding: 10px 0;
+		border-top: 1px solid $footer-border;
+
+		img {
+			width: 100px;
+		}
+	}
+
+	.list-footer {
+		list-style: none;
+		padding-left: 0;
+		position: relative;
+		z-index: 2;
+
+		li {
+			a {
+				
+				color: $light;
+				display: block;
+				padding: .625rem 0;
+				font-size: 14px;
+			}
+		}
+	}
+}

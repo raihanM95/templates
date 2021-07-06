@@ -1,0 +1,48 @@
+.pricing-box {
+	border: solid 1px $border-color;
+	padding: 47px;
+	text-align: center;
+	margin-top: 40px;
+	z-index: 2;
+	position: relative;
+	-webkit-transition: all 1s;
+	-moz-transition: all 1s;
+	-ms-transition: all 1s;
+	-o-transition: all 1s;
+	transition: all 1s;
+
+	.title-text {
+		color: theme-color(dark);
+	}
+	.text-amount {
+		color: theme-color(primary);
+	}
+	.pricing-list {
+		list-style: none;
+		padding-left: 0;
+		margin-bottom: 40px;
+		li {
+			padding: 8px;
+		}
+	}
+	&.selected {
+		box-shadow: 0 9px 15px 0 rgba(7, 42, 68, 0.09);
+	}
+	&:hover {
+		background: $dark;
+		.title-text {
+			color: $white;
+		}
+		.text-amount {
+			color: $white;
+		}
+		.pricing-list {
+			li {
+				color: $white;
+			}
+		}
+		.btn {
+		color: $white;
+		}
+	}
+}
