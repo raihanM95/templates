@@ -4,7 +4,7 @@
 
 ## Preview
 
-[![SB Admin Preview](https://startbootstrap.com/assets/img/screenshots/templates/sb-admin.png)](https://startbootstrap.github.io/startbootstrap-sb-admin/)
+<img src="documentations/documentation.png" alt="Screen"/>
 
 **[View Live Preview](https://startbootstrap.github.io/startbootstrap-sb-admin/)**
 
